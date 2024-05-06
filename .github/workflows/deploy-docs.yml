@@ -23,15 +23,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-          cache-dependency-path: "docs"
       - name: Install dependencies
         run: pnpm install
-        working-directory: ./docs
       - name: Build
         run: pnpm build
-        working-directory: ./docs
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
           branch: gh-pages
-          folder: ./docs/build
+          folder: ./build
