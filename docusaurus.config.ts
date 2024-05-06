@@ -24,7 +24,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl:
-            'https://github.com/maxidragon/FKMTime/tree/main/docs/',
+            'https://github.com/FKMTime/docs/tree/main/docs/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -45,7 +45,7 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          href: 'https://github.com/maxidragon/FKMTime',
+          href: 'https://github.com/FKMTime/FKMTime',
           label: 'GitHub',
           position: 'right',
         },
