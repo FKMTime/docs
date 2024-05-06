@@ -6,7 +6,7 @@ sidebar_position: 5
 
 ## Buy proper cards
 
-You will need to buy RFID cards with 13.xx MHz frequency.
+You will need to buy RFID cards with 13.56 MHz frequency.
 
 ## Assign cards to the competitors
 
