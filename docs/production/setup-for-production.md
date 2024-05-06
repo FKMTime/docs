@@ -25,6 +25,8 @@ mv .env.example .env
 
 For now, contact us and we will send you hash, token, proxy and WCA oauth credentials. Server will be running locally, but will be accessible from the internet through our proxy server.
 
+We are using [fkm-proxy](https://github.com/FKMTime/fkm-proxy) for proxying requests to the server. You can find more information about it in the repository.
+
 ## Logs user
 
 Generate a password hash for the logs user using the following command:
