@@ -11,7 +11,7 @@ We use Docker for production. Do the following steps to run the server:
 ## Clone the repository (and navigate into it)
 
 ```bash
-git clone https://github.com/maxidragon/FKMTime
+git clone https://github.com/FKMTime/FKMTime
 cd FKMTime
 ```
 

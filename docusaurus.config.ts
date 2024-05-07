@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
   url: 'https://fkmtime.github.io',
   baseUrl: '/docs/',
-  organizationName: 'maxidragon',
+  organizationName: 'FKMTime',
   projectName: 'FKMTime',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

@@ -10,7 +10,7 @@ You can run FKMTime in development mode in 2 ways:
 
 Clone this repo and navigate into it
 ```bash
-git clone https://github.com/maxidragon/FKMTime
+git clone https://github.com/FKMTime/FKMTime
 cd FKMTime
 ```
 
