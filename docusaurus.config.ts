@@ -23,6 +23,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath: '/',
           editUrl:
             'https://github.com/FKMTime/docs/tree/main/docs/',
         },
