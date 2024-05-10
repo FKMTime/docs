@@ -21,3 +21,11 @@
   align-items: center;
   justify-content: center;
 }
+
+.contact {
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+}

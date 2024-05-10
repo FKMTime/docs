@@ -37,6 +37,9 @@ export default function Home(): JSX.Element {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <div className={styles.contact}>
+          You can contact us by email at <a href="mailto:fkmtime@gmail.com">fkmtime@gmail.com</a>
+        </div>
       </main>
     </Layout>
   );
