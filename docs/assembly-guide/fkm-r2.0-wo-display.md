@@ -10,6 +10,7 @@ To build your own FKM device you need few things:
 - A few electronics components
 - FKM PCB board
 - 3d Printed case
+- m3 bolts (20mm)
 
 ## Electronics components
 
@@ -33,6 +34,9 @@ List of required electronics components:
     - With this one, you can just buy other connector and cables for 2.54mm
 - [TP4056 with protection](https://botland.store/charger-modules-for-li-po-batteries/16979-tp4056-type-c-usb-5v-1a-lithium-battery-charger-module-board-5904422326708.html)
     - You can buy it whereever, and you can also choose your plug (USB-C, MicroUsb, etc..)
+- MFRC522 module (you can sea4ch for it on aliexpress - this blue one)
+- [LCD 16x2](https://pl.aliexpress.com/item/1005006291057456.html?spm=a2g0o.home.pcJustForYouTop.2.3011405fo3T8yr&gps-id=pcJustForYouTop&scm=1007.13562.333647.0&scm_id=1007.13562.333647.0&scm-url=1007.13562.333647.0&pvid=5af44ded-8df1-4e8a-b1fd-5982fc7d2bec&_t=gps-id:pcJustForYouTop,scm-url:1007.13562.333647.0,pvid:5af44ded-8df1-4e8a-b1fd-5982fc7d2bec,tpp_buckets:668%232846%238116%232002&pdp_npi=4%40dis%21PLN%214.20%214.74%21%21%217.44%218.40%21%402102f6cb17153299350271189e1cba%2112000036755786465%21rec%21PL%212112067295%21&utparam-url=scene%3ApcJustForYouTop%7Cquery_from%3A)
+    - HD44780 LCD + I2C adapter
 
 ![PCB RED ARROWS](/img/pcb-arrows.png)
 
@@ -51,3 +55,11 @@ I personally prefer JLCPCB, so i'll provide guide only for JLCPCB. Here are the 
 
 To order more PCBs for less money you can panelize them using the `panelize.sh` script located in the `pcb` directory of the `firmware` github repo.
 Running this script will generate Gerber files for panel with 6PCB's. Ordering this will be much cheaper than ordering just one PCB.
+
+
+## 3D prints
+
+You need to print these things:
+- [Case](https://example.com)
+- [Lid](https://example.com)
+- [Switch holder](https://example.com)
