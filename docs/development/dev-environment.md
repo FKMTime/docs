@@ -23,10 +23,7 @@ docker compose -f docker-compose-dev.yml up
 
 Frontend will be accessible at localhost:5173, backend at localhost:5000, database at localhost:5432 and api-tester at localhost:5001
 
-You can read how to setup local WCA server [here](https://docs.worldcubeassociation.org/contributing/quickstart.html) and how to setup local WCA Live server [here](https://github.com/thewca/wca-live?tab=readme-ov-file#developing-in-docker)
-
-If you want other WCA server than local you have to change `WCA_ORIGIN` and `WCA_LIVE_API_ORIGIN` in `docker-compose-dev.yml` file.
-
+Read about setuping WCA and WCA Live server in [WCA Server](./wca-server.md) section.
 
 ## Running backend and frontend separately
 
