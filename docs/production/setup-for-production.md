@@ -8,11 +8,11 @@ The system is designed to be configured from scratch for each competition. Every
 
 We use Docker for production. Do the following steps to run the server:
 
-## Clone the repository (and navigate into it)
+## Clone the production repository (and navigate into it)
 
 ```bash
-git clone https://github.com/FKMTime/FKMTime
-cd FKMTime
+git clone https://github.com/FKMTime/production
+cd production
 ```
 
 ## Environment variables
@@ -46,4 +46,4 @@ And finally, run the following command to start the server:
 docker compose up
 ```
 
-This will start backend, micro-connector, database and the frontend. 
+This will start backend, micro-connector, database and frontend. 

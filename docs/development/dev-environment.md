@@ -8,7 +8,8 @@ You can run FKMTime in development mode in 2 ways:
 - Using Docker
 - Running backend and frontend separately
 
-Clone this repo and navigate into it
+Clone FKMTime repository and navigate into it
+
 ```bash
 git clone https://github.com/FKMTime/FKMTime
 cd FKMTime
@@ -18,7 +19,7 @@ cd FKMTime
 Run the following command in the root directory of the project
 
 ```bash
-docker compose -f docker-compose-dev.yml up
+docker compose up
 ```
 
 Frontend will be accessible at localhost:5173, backend at localhost:5000, database at localhost:5432 and api-tester at localhost:5001
