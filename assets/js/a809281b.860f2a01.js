@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[926],{7595:e=>{e.exports=JSON.parse('{"title":"Basic knowledge","description":"Basic knowledge about the FKMTime system","slug":"/category/basic-knowledge","permalink":"/category/basic-knowledge","navigation":{"next":{"title":"How FKMTime works?","permalink":"/basic-knowledge/how-it-works"}}}')}}]);
