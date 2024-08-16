@@ -20,4 +20,8 @@ Then click on "Add" button.
 
 3. That's it! Now everything works the same as for official events.
 
+## Entering unofficial events results into CubingContests
 
+If you want to enter unofficial events results into CubingContests, you need to enter CubingContests API key in competition settings.
+
+![img.png](../assets/cubing-contests-api-key.png)
