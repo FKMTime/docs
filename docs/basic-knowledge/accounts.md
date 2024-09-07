@@ -6,18 +6,29 @@ sidebar_position: 3
 
 FKMTime primarily uses WCA accounts for authentication. This means, delegates and organizers should log in with their WCA accounts and they will have admin access to the panel. 
 
-But sometimes, you want for example staff member to check-in competitors. You have to create an FKMTime account for them.
+But sometimes, you want for example staff member to check-in competitors. You have to create an FKMTime account for them OR add their WCA Account to the system.
 
 ## Creating an account
 
-Go to **accounts** page
+Go to **users** page
 
 ![img.png](../assets/accounts.png)
 
-Click on the plus button, fill in the form and click create button. Staff member can now log in with these credentials.
+Click on the plus button and you can choose between FKM and WCA account.
+
+### FKM Account
+![img.png](../assets/create-fkm-account.png)
+
+Just fill in the details and click save, user will be able to login with username and password you provided.
+
+### WCA Account
+
+![img.png](../assets/create-wca-account.png)
+
+Search for a person, select role and click save. User will be able to login with WCA account and will have the same permissions as you selected.
 
 You can also delete any account, edit details or change password.
 
 ## Access to competition
 
-If someone who logs in with WCA account doesn't have access to the competition will obviously not be added to accounts page, you have to add them as delegate/organizer on the WCA website and sync WCIF in competition tab.
+If someone who logs in with WCA account doesn't have access to the competition (except for WCA Website Admins) will obviously not be added to accounts page, you have to add them as delegate/organizer on the WCA website and sync WCIF in competition tab first (or add their WCA Account, as described above).

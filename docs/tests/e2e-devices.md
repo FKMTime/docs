@@ -1,10 +1,8 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 ---
 
-# Tests
-
-## E2E devices tests
+# E2E devices tests
 
 You can test the communication of FKM devices with `micro-connector` using builtin E2E tests.
 
