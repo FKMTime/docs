@@ -35,6 +35,10 @@ There is one record in this table. It stores the competition settings, WCIF and 
 - `shouldChangeGroupsAutomatically` - boolean, if the groups should be changed automatically
 - `wifiSsid` - wifi SSID, that FKMTime devices will be using to connect to micro-connector
 - `wifiPassword` - wifi password
+- `mdns` - boolean, whether mDNS should be used to discover devices
+- `ipAddress` - IP address of the server (if mDNS is not used)
+- `port` - port of the server (if mDNS is not used)
+- `secure` - boolean, if the server is using SSL (if mDNS is not used)
 - `wcif` - JSON, stores public WCIF of the competition
 - `scoretakingToken` - token taken from WCA Live for entering results
 - `cubingContestToken` - token taken from CubingContests for entering results
