@@ -36,13 +36,11 @@ There is one record in this table. It stores the competition settings, WCIF and 
 - `wifiSsid` - wifi SSID, that FKMTime devices will be using to connect to micro-connector
 - `wifiPassword` - wifi password
 - `mdns` - boolean, whether mDNS should be used to discover devices
-- `ipAddress` - IP address of the server (if mDNS is not used)
-- `port` - port of the server (if mDNS is not used)
-- `secure` - boolean, if the server is using SSL (if mDNS is not used)
+- `ws_url` - websocket URL if mDNS is not used
 - `wcif` - JSON, stores public WCIF of the competition
 - `scoretakingToken` - token taken from WCA Live for entering results
 - `cubingContestToken` - token taken from CubingContests for entering results
-- `scoretakkingTokenExpiresAt` - date, after this date token may have expired (7 days after saving the new token)
+- `scoretakingTokenExpiresAt` - date, after this date token may have expired (7 days after saving the new token)
 
 ### UnofficialEvent
 
@@ -61,7 +59,7 @@ This table stores rooms taken from WCIF during import.
 - `id` - unique identifier
 - `name` - room name
 - `color` - room color
-- `currentGroupId` - id of the group that takes place currently in this room, can be null
+- `currentGroupIds` - array of WCIF group IDs that are currently taking place in the room, may be empty
 - `createdAt` - date of creation
 - `updatedAt` - date of last update
 
@@ -165,6 +163,37 @@ This table is the biggest table, it stores all attempts that are entered during 
 - `judgeId` - [Person](#person) that judged the attempt
 - `deviceId` - [Device](#device) that was used to enter the attempt (can be null if attempt was entered manually)
 - `solvedAt` - date of finishing the solve
+- `createdAt` - date of creation
+- `updatedAt` - date of last update
+
+
+### ScramblingDevice
+
+This table stores data about scrambling devices (e. g. laptops) that are used during the competition.
+
+- `id` - unique identifier
+- `name` - device name
+- `encryptedToken` - token used to authenticate the device
+- `encryptedOneTimeCode` - one-time code used to login on the device
+- `roomId` - [Room](#room)
+- `createdAt` - date of creation
+- `updatedAt` - date of last update
+
+### ScrambleSet
+
+- `id` - unique identifier
+- `roundId` - round ID in WCIF format
+- `set` - letter, e. g. "A"
+- `createdAt` - date of creation
+- `updatedAt` - date of last update
+
+### Scramble
+
+- `id` - unique identifier
+- `scrambleSetId` - [ScrambleSet](#scrambleset)
+- `num` - number of the scramble in the set
+- `isExtra` - boolean, if the scramble is extra
+- `encryptedScramble` - encrypted scramble
 - `createdAt` - date of creation
 - `updatedAt` - date of last update
 

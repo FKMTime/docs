@@ -14,7 +14,7 @@ Go to **users** page
 
 ![img.png](../assets/accounts.png)
 
-Click on the plus button and you can choose between FKM and WCA account.
+Click on the plus button and choose between FKM and WCA account.
 
 ### FKM Account
 ![img.png](../assets/create-fkm-account.png)

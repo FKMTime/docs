@@ -6,7 +6,7 @@ sidebar_position: 9
 
 We use [GitHub Releases](https://github.com/FKMTime/firmware/releases) to distribute updates. 
 
-You have to turn on updates in device settings in frontend. After that, turn on all devices and micro-connector. Micro-connector checks for new updates every 5 minutes and if there is a new update, it will automatically download it and send it to all devices.
+You have to turn on updates in device settings in frontend (you can find them in "Devices" page). After that, turn on all devices and micro-connector. Micro-connector checks for new updates every 5 minutes and if there is a new update, it will automatically download it and send it to all devices.
 
 ![updates](../assets/updates.png)
 

@@ -22,6 +22,6 @@ You have to connect to the hotspot created by device. Name of the hotspot will b
 
 ### After entering Wi-Fi data
 
-Click the submit button, and you can easily add devices to the database. They will be displayed in **Available devices** section in devices tab. 
+Click the submit button, and you can easily add devices to the database. They will be displayed at the top of the table.
 
 ![img.png](../assets/adding-devices.png)

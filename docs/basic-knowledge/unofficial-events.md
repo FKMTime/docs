@@ -8,9 +8,9 @@ It is possible to use FKMTime for unofficial events. Basically, all you need to 
 
 ## How to add an unofficial event?
 
-1. Go to Competition tab and click "Unofficial events" button.
+1. Go to Unofficial Events page.
 
-![img.png](../assets/competition-settings.png)
+![img.png](../assets/unofficial-events.png)
 
 2. Click on the plus button and choose the event and adjust rounds and limits.
 
