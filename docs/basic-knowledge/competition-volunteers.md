@@ -2,11 +2,11 @@
 sidebar_position: 7
 ---
 
-# Staff members
+# Competition Volunteers
 
 Go to the persons page and click on the plus button.
 
-## Adding staff member to the system
+## Adding Competition Volunteer to the system
 
 ![img.png](../assets/add-staff-member.png)
 
