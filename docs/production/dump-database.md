@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Dump database
 
-It is a good practice to dump the database after competition so it can be used for future analysis or to restore the database if any data is needed after turning of the server.
+It is a good practice to dump the database after competition so it can be used for future analysis or to restore the database if any data is needed after turning off the server.
 
 ## Dumping the database
 
