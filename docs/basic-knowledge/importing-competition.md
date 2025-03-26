@@ -12,10 +12,6 @@ To import a competition, you need WCA account with access to the competition you
 
 After first login to the system, you will be redirected to the import page.
 
-:::note
-If you are a WCA Website Admin (WRT/WST/WCAT) you can import any competitions, search bar will be visible. If you are not, you can import only competitions where you are a delegate or organizer.
-:::
-
 ![img.png](../assets/importing-competition.png)
 
 Just click the green import button and you will be redirected to competition settings page.
