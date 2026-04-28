@@ -28,10 +28,18 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.2.1",
-    "@docusaurus/tsconfig": "3.2.1",
-    "@docusaurus/types": "3.2.1",
+    "@docusaurus/module-type-aliases": "~3.9.0",
+    "@docusaurus/tsconfig": "~3.9.0",
+    "@docusaurus/types": "~3.9.0",
     "typescript": "~5.2.2"
+  },
+  "overrides": {
+    "webpack": "~5.98.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "webpack": "~5.98.0"
+    }
   },
   "browserslist": {
     "production": [
@@ -48,7 +56,5 @@
   "engines": {
     "node": ">=18.0"
   },
-  "patchedDependencies": {
-    "webpackbar@5.0.2": "patches/webpackbar@5.0.2.patch"
-  }
+  "packageManager": "pnpm@8.15.9"
 }

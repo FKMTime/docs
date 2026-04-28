@@ -32,87 +32,87 @@ https://docs.fkmtime.com/debugging/e<code>
 
 | Code | Name | Description |
 |------|------|-------------|
-| [E1](e1) | `RFID_INIT_FAILED` | RFID reader failed to initialize |
-| [E2](e2) | `RFID_SPI_CREATE_FAILED` *(v3)* | SPI device registration for RFID failed |
-| [E3](e3) | `RFID_SPI_BUS_INIT_FAILED` *(v3)* | SPI bus initialization failed |
-| [E4](e4) | `RFID_DMA_TX_INIT_FAILED` *(v3)* | DMA TX channel for RFID SPI failed |
-| [E5](e5) | `RFID_DMA_RX_INIT_FAILED` *(v3)* | DMA RX channel for RFID SPI failed |
-| [E6](e6) | `RFID_SOLVE_GROUP_MISSING` | Device has no solve group assigned |
+| [E1](/debugging/e1) | `RFID_INIT_FAILED` | RFID reader failed to initialize |
+| [E2](/debugging/e2) | `RFID_SPI_CREATE_FAILED` *(v3)* | SPI device registration for RFID failed |
+| [E3](/debugging/e3) | `RFID_SPI_BUS_INIT_FAILED` *(v3)* | SPI bus initialization failed |
+| [E4](/debugging/e4) | `RFID_DMA_TX_INIT_FAILED` *(v3)* | DMA TX channel for RFID SPI failed |
+| [E5](/debugging/e5) | `RFID_DMA_RX_INIT_FAILED` *(v3)* | DMA RX channel for RFID SPI failed |
+| [E6](/debugging/e6) | `RFID_SOLVE_GROUP_MISSING` | Device has no solve group assigned |
 
 ## Battery (E10–E19)
 
 | Code | Name | Description |
 |------|------|-------------|
-| [E10](e10) | `BATTERY_INIT_FAILED` *(v4)* | Battery monitoring subsystem failed to initialize |
+| [E10](/debugging/e10) | `BATTERY_INIT_FAILED` *(v4)* | Battery monitoring subsystem failed to initialize |
 
 ## LCD / Display (E20–E29)
 
 | Code | Name | Description |
 |------|------|-------------|
-| [E20](e20) | `LCD_INIT_FAILED` *(v4)* | LCD display driver failed to initialize |
-| [E21](e21) | `LCD_FRAMEBUFFER_ALLOC_FAILED` *(v4)* | Could not allocate LCD framebuffer in RAM |
+| [E20](/debugging/e20) | `LCD_INIT_FAILED` *(v4)* | LCD display driver failed to initialize |
+| [E21](/debugging/e21) | `LCD_FRAMEBUFFER_ALLOC_FAILED` *(v4)* | Could not allocate LCD framebuffer in RAM |
 
 ## Stackmat (E30–E39)
 
 | Code | Name | Description |
 |------|------|-------------|
-| [E30](e30) | `STACKMAT_UART_INIT_FAILED` | UART for Stackmat timer failed to initialize |
+| [E30](/debugging/e30) | `STACKMAT_UART_INIT_FAILED` | UART for Stackmat timer failed to initialize |
 
 ## Firmware / OTA (E40–E49)
 
 | Code | Name | Description |
 |------|------|-------------|
-| [E40](e40) | `WRONG_PARTITION_TABLE` | Flash partition table does not match firmware expectations |
-| [E41](e41) | `OTA_MARK_VALID_FAILED` | Failed to mark new firmware as valid after OTA update |
-| [E42](e42) | `OTA_VERIFY_FAILED` | Downloaded OTA image failed integrity verification |
-| [E43](e43) | `WS_CONNECTION_LOST_DURING_OTA` | WebSocket dropped mid-OTA update |
+| [E40](/debugging/e40) | `WRONG_PARTITION_TABLE` | Flash partition table does not match firmware expectations |
+| [E41](/debugging/e41) | `OTA_MARK_VALID_FAILED` | Failed to mark new firmware as valid after OTA update |
+| [E42](/debugging/e42) | `OTA_VERIFY_FAILED` | Downloaded OTA image failed integrity verification |
+| [E43](/debugging/e43) | `WS_CONNECTION_LOST_DURING_OTA` | WebSocket dropped mid-OTA update |
 
 ## BLE (E50–E59)
 
 | Code | Name | Description |
 |------|------|-------------|
-| [E50](e50) | `BLE_INIT_FAILED` | BLE stack failed to initialize |
-| [E51](e51) | `BLE_MAC_READ_FAILED` | Could not read the device BLE MAC address |
-| [E52](e52) | `BLE_BOND_ADD_FAILED` | Failed to store BLE bond keys in NVS |
-| [E53](e53) | `BLE_SCAN_START_FAILED` | BLE scan for FKMTime Displays could not start |
-| [E54](e54) | `BLE_BONDABLE_FAILED` | Could not set BLE stack into bondable mode |
-| [E55](e55) | `BLE_REQUEST_SECURITY_FAILED` | BLE security request failed |
-| [E56](e56) | `BLE_PAIRING_FAILED` | BLE pairing with FKMTime Display unsuccessful |
-| [E57](e57) | `BLE_GATT_CLIENT_FAILED` | GATT client creation failed |
-| [E58](e58) | `BLE_SERVICE_NOT_FOUND` | Expected BLE service not found on FKMTime Display |
-| [E59](e59) | `BLE_CHARACTERISTIC_NOT_FOUND` | Expected BLE characteristic not found |
+| [E50](/debugging/e50) | `BLE_INIT_FAILED` | BLE stack failed to initialize |
+| [E51](/debugging/e51) | `BLE_MAC_READ_FAILED` | Could not read the device BLE MAC address |
+| [E52](/debugging/e52) | `BLE_BOND_ADD_FAILED` | Failed to store BLE bond keys in NVS |
+| [E53](/debugging/e53) | `BLE_SCAN_START_FAILED` | BLE scan for FKMTime Displays could not start |
+| [E54](/debugging/e54) | `BLE_BONDABLE_FAILED` | Could not set BLE stack into bondable mode |
+| [E55](/debugging/e55) | `BLE_REQUEST_SECURITY_FAILED` | BLE security request failed |
+| [E56](/debugging/e56) | `BLE_PAIRING_FAILED` | BLE pairing with FKMTime Display unsuccessful |
+| [E57](/debugging/e57) | `BLE_GATT_CLIENT_FAILED` | GATT client creation failed |
+| [E58](/debugging/e58) | `BLE_SERVICE_NOT_FOUND` | Expected BLE service not found on FKMTime Display |
+| [E59](/debugging/e59) | `BLE_CHARACTERISTIC_NOT_FOUND` | Expected BLE characteristic not found |
 
 ## Wi-Fi / mDNS / WebSocket (E60–E69)
 
 | Code | Name | Description |
 |------|------|-------------|
-| [E60](e60) | `WIFI_MANAGER_FAILED` | Wi-Fi manager failed to start |
-| [E61](e61) | `MDNS_WS_URL_PARSE_FAILED` | WebSocket URL from mDNS discovery could not be parsed |
-| [E62](e62) | `WS_DNS_RESOLVE_EMPTY` | DNS resolution for the server hostname returned no results |
-| [E63](e63) | `WS_HTTP_UPGRADE_READ_FAILED` | Reading the WebSocket HTTP upgrade response failed |
-| [E64](e64) | `WS_PACKET_PARSE_FAILED` | Received WebSocket packet could not be decoded |
-| [E65](e65) | `WS_PACKET_SERIALIZE_FAILED` | Outgoing WebSocket packet could not be encoded |
-| [E66](e66) | `WS_TAGGED_SUBSCRIBER_FAILED` | Failed to register a WebSocket message subscriber |
+| [E60](/debugging/e60) | `WIFI_MANAGER_FAILED` | Wi-Fi manager failed to start |
+| [E61](/debugging/e61) | `MDNS_WS_URL_PARSE_FAILED` | WebSocket URL from mDNS discovery could not be parsed |
+| [E62](/debugging/e62) | `WS_DNS_RESOLVE_EMPTY` | DNS resolution for the server hostname returned no results |
+| [E63](/debugging/e63) | `WS_HTTP_UPGRADE_READ_FAILED` | Reading the WebSocket HTTP upgrade response failed |
+| [E64](/debugging/e64) | `WS_PACKET_PARSE_FAILED` | Received WebSocket packet could not be decoded |
+| [E65](/debugging/e65) | `WS_PACKET_SERIALIZE_FAILED` | Outgoing WebSocket packet could not be encoded |
+| [E66](/debugging/e66) | `WS_TAGGED_SUBSCRIBER_FAILED` | Failed to register a WebSocket message subscriber |
 
 ## NVS Persistence (E70–E79)
 
 | Code | Name | Description |
 |------|------|-------------|
-| [E70](e70) | `NVS_SAVED_STATE_WRITE_FAILED` | Writing device state to NVS failed |
-| [E71](e71) | `NVS_BONDING_KEY_WRITE_FAILED` | Writing BLE bond keys to NVS failed |
-| [E72](e72) | `NVS_BUZZER_VOLUME_WRITE_FAILED` *(v4)* | Writing buzzer volume setting to NVS failed |
-| [E73](e73) | `ERROR_LOG_PARSE_FAILED` | Could not parse the crash log stored in NVS |
-| [E74](e74) | `NVS_SAVED_STATE_DELETE_FAILED` | Deleting saved state from NVS failed |
+| [E70](/debugging/e70) | `NVS_SAVED_STATE_WRITE_FAILED` | Writing device state to NVS failed |
+| [E71](/debugging/e71) | `NVS_BONDING_KEY_WRITE_FAILED` | Writing BLE bond keys to NVS failed |
+| [E72](/debugging/e72) | `NVS_BUZZER_VOLUME_WRITE_FAILED` *(v4)* | Writing buzzer volume setting to NVS failed |
+| [E73](/debugging/e73) | `ERROR_LOG_PARSE_FAILED` | Could not parse the crash log stored in NVS |
+| [E74](/debugging/e74) | `NVS_SAVED_STATE_DELETE_FAILED` | Deleting saved state from NVS failed |
 
 ## Tasks / Runtime (E80–E89)
 
 | Code | Name | Description |
 |------|------|-------------|
-| [E80](e80) | `TASK_SPAWN_FAILED` | A required FreeRTOS task could not be created |
+| [E80](/debugging/e80) | `TASK_SPAWN_FAILED` | A required FreeRTOS task could not be created |
 
 ## Crash Recovery (E90–E99)
 
 | Code | Name | Description |
 |------|------|-------------|
-| [E90](e90) | `DOUBLE_PANIC_RECOVERY` *(release)* | Device panicked twice and entered safe recovery mode |
-| [E91](e91) | `BACKTRACE_READ_FAILED` | Crash backtrace could not be read from NVS |
+| [E90](/debugging/e90) | `DOUBLE_PANIC_RECOVERY` *(release)* | Device panicked twice and entered safe recovery mode |
+| [E91](/debugging/e91) | `BACKTRACE_READ_FAILED` | Crash backtrace could not be read from NVS |
