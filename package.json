@@ -5,10 +5,8 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "generate-firmware-index": "node scripts/generate-firmware-index.js",
-    "prestart": "node scripts/generate-firmware-index.js",
-    "prebuild": "node scripts/generate-firmware-index.js",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "start": "node scripts/generate-firmware-index.js && docusaurus start",
+    "build": "node scripts/generate-firmware-index.js && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
