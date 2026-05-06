@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-05-06T10:27:42.099Z",
+  "groups": [
+    {
+      "hwRev": "v4",
+      "type": "STATION",
+      "versions": [
+        {
+          "version": "3.4.0",
+          "file": "v4_STATION_v3.4.0_MERGED.bin"
+        }
+      ]
+    },
+    {
+      "hwRev": "v3",
+      "type": "STATION",
+      "versions": [
+        {
+          "version": "3.4.0",
+          "file": "v3_STATION_v3.4.0_MERGED.bin"
+        }
+      ]
+    }
+  ]
+}
