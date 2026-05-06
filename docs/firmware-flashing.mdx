@@ -1,0 +1,37 @@
+---
+sidebar_position: 2
+title: Firmware flashing
+---
+
+import FirmwareFlasher from '@site/src/components/FirmwareFlasher';
+
+# Firmware flashing
+
+Flash FKMTime firmware to your device directly from the browser using
+[`esp-web-tools`](https://esphome.github.io/esp-web-tools/). No drivers, no CLI
+tools — just connect the device over USB and click **Flash**.
+
+## Requirements
+
+- A Chromium-based browser (Chrome, Edge or Opera) on desktop.
+- The page must be served over **HTTPS** (the public docs site is — Web Serial
+  will not work over plain HTTP, except on `localhost`).
+- A USB cable that supports data (not just power) and the device set to
+  bootloader/download mode if required.
+
+The latest firmware for each hardware revision is shown first. Use the
+**Show older versions** button to access previous releases.
+
+<FirmwareFlasher />
+
+## Troubleshooting
+
+- **"Web Serial not supported"** — switch to Chrome, Edge or Opera on a
+  desktop OS.
+- **Device not detected** — try another USB cable / port, and make sure no
+  other program (serial monitor, IDE) is holding the port open.
+- **Flash fails partway through** — perform a full chip erase by re-running
+  the flasher; the installer offers an erase option on first install.
+
+If problems persist, see the [debugging](./debugging) section or open an
+issue on [GitHub](https://github.com/FKMTime/firmware).
