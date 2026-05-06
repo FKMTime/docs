@@ -9,7 +9,7 @@ Basically, there are:
 - Frontend: React
 - Database: PostgreSQL
 - Micro-connector: Rust
-- FKM Devices (PlatformIO)
+- FKM Devices (esp-hal / Rust)
 
 Communication between devices and backend looks like this:
 
