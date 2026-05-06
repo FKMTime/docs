@@ -8,6 +8,13 @@ The system is designed to be configured from scratch for each competition. Every
 
 We use Docker for production. Do the following steps to run the server:
 
+:::tip Easier option: FIM
+If you don't want to manage `docker compose` and `.env` files by hand,
+take a look at the [FKMTime Instance Manager](./instance-manager) (FIM).
+It wraps everything below into a small web UI and is the recommended
+way to run FKMTime on a dedicated competition box.
+:::
+
 ## Clone the production repository (and navigate into it)
 
 ```bash
