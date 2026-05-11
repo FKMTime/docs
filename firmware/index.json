@@ -1,10 +1,14 @@
 {
-  "generatedAt": "2026-05-06T11:50:56.357Z",
+  "generatedAt": "2026-05-11T22:09:38.391Z",
   "groups": [
     {
       "hwRev": "v4",
       "type": "STATION",
       "versions": [
+        {
+          "version": "3.4.1",
+          "file": "v4_STATION_v3.4.1_MERGED.bin"
+        },
         {
           "version": "3.4.0",
           "file": "v4_STATION_v3.4.0_MERGED.bin"
@@ -15,6 +19,10 @@
       "hwRev": "v3",
       "type": "STATION",
       "versions": [
+        {
+          "version": "3.4.1",
+          "file": "v3_STATION_v3.4.1_MERGED.bin"
+        },
         {
           "version": "3.4.0",
           "file": "v3_STATION_v3.4.0_MERGED.bin"
