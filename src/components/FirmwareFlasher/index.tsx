@@ -85,7 +85,7 @@ function FlashButton({ group, version, baseUrl, label }: FlashButtonProps) {
   return (
     <esp-web-install-button ref={ref as React.RefObject<HTMLElement>}>
       <button slot="activate" className={styles.flashButton}>
-        {label ?? `Flash ${version.version}`}
+        {label ?? "Flash"}
       </button>
       <span slot="unsupported" className={styles.unsupported}>
         Your browser does not support Web Serial. Use a Chromium-based browser
@@ -162,8 +162,17 @@ function FirmwareGroupCard({
                 onClick={() => setMenuOpen((open) => !open)}
                 aria-expanded={menuOpen}
               >
-                <span>
-                  {selectedVersion ? `v${selectedVersion.version}` : "Choose version"}
+                <span className={styles.dropdownTriggerValue}>
+                  {selectedVersion ? (
+                    <>
+                      <span>v{selectedVersion.version}</span>
+                      {selectedVersion.version === latest.version && (
+                        <span className={styles.latestTag}>latest</span>
+                      )}
+                    </>
+                  ) : (
+                    "Choose version"
+                  )}
                 </span>
                 <span aria-hidden>▾</span>
               </button>
@@ -203,12 +212,7 @@ function FirmwareGroupCard({
               )}
             </div>
             {selectedVersion && (
-              <FlashButton
-                group={group}
-                version={selectedVersion}
-                baseUrl={baseUrl}
-                label={`Flash v${selectedVersion.version}`}
-              />
+              <FlashButton group={group} version={selectedVersion} baseUrl={baseUrl} />
             )}
           </div>
         </div>

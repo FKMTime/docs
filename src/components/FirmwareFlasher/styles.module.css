@@ -113,18 +113,31 @@
   flex: 1 1 200px;
 }
 
+/* Match card surface — same vars as .card so dropdown is never see-through if --ifm-background-color is transparent */
 .dropdownTrigger {
   width: 100%;
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 6px;
-  background: var(--ifm-background-color);
+  background-color: var(
+    --ifm-card-background-color,
+    var(--ifm-background-surface-color, var(--ifm-background-color))
+  );
   color: var(--ifm-color-emphasis-900);
   padding: 0.38rem 0.45rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.35rem;
   cursor: pointer;
   font-size: 0.8rem;
+}
+
+.dropdownTriggerValue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+  flex-wrap: wrap;
 }
 
 .dropdownMenu {
@@ -134,7 +147,11 @@
   width: 100%;
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 6px;
-  background: var(--ifm-background-color);
+  background-color: var(
+    --ifm-card-background-color,
+    var(--ifm-background-surface-color, var(--ifm-background-color))
+  );
+  isolation: isolate;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
   padding: 0.35rem;
 }
@@ -143,6 +160,10 @@
   width: 100%;
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 5px;
+  background-color: var(
+    --ifm-card-background-color,
+    var(--ifm-background-surface-color, var(--ifm-background-color))
+  );
   padding: 0.32rem 0.45rem;
   margin-bottom: 0.3rem;
   font-size: 0.8rem;
@@ -155,8 +176,11 @@
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
-  max-height: 140px;
-  overflow: auto;
+  /* Fixed viewport for long lists; scroll inside the panel */
+  max-height: min(240px, 40vh);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .optionButton {
@@ -196,14 +220,24 @@
   letter-spacing: 0.02em;
 }
 
+/* Mobile: keep dropdown + flash on one row; narrower trigger; button flush right */
 @media (max-width: 560px) {
   .controlRow {
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: minmax(0, min(190px, calc(100% - 5.75rem))) 1fr;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  /* Second column eats remaining width so empty space sits left of the button, not right */
+  .controlRow > :last-child:not(:only-child) {
+    justify-self: end;
   }
 
   .dropdown {
     width: 100%;
-    flex-basis: 100%;
+    flex: unset;
+    min-width: 0;
   }
 }
 
