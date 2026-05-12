@@ -9,35 +9,53 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: start;
 }
 
 .card {
   border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  padding: 0.95rem 1rem;
   background: var(--ifm-card-background-color, var(--ifm-background-surface-color));
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.6rem;
 }
 
 .cardHeader {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
-  flex-wrap: wrap;
+}
+
+.identityBlock {
+  min-width: 0;
 }
 
 .cardTitle {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
+  line-height: 1.2;
 }
 
 .cardSubtitle {
-  margin: 0.25rem 0 0;
-  color: var(--ifm-color-emphasis-700);
-  font-size: 0.9rem;
+  margin: 0.15rem 0 0;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.latestPill {
+  border: 1px solid var(--ifm-color-primary-lightest);
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darkest);
+  border-radius: 999px;
+  padding: 0.18rem 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .flashButton {
@@ -45,11 +63,12 @@
   color: #fff;
   border: none;
   border-radius: 6px;
-  padding: 0.55rem 1rem;
-  font-size: 0.95rem;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.82rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.15s ease;
+  white-space: nowrap;
 }
 
 .flashButton:hover {
@@ -63,45 +82,129 @@
 
 .olderSection {
   border-top: 1px solid var(--ifm-color-emphasis-200);
-  padding-top: 0.75rem;
+  padding-top: 0.65rem;
 }
 
-.toggleButton {
-  background: transparent;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  color: var(--ifm-color-emphasis-800);
-  border-radius: 6px;
-  padding: 0.4rem 0.75rem;
-  cursor: pointer;
-  font-size: 0.85rem;
-}
-
-.toggleButton:hover {
-  background: var(--ifm-color-emphasis-100);
-}
-
-.olderList {
-  list-style: none;
-  padding: 0.5rem 0 0;
-  margin: 0;
+.olderPicker {
+  margin-top: 0.15rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
-.olderItem {
+.searchLabel {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.controlRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.dropdown {
+  position: relative;
+  width: 230px;
+  flex: 1 1 200px;
+}
+
+.dropdownTrigger {
+  width: 100%;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-emphasis-900);
+  padding: 0.38rem 0.45rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
-  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.dropdownMenu {
+  position: absolute;
+  z-index: 20;
+  margin-top: 0.2rem;
+  width: 100%;
+  border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 6px;
+  background: var(--ifm-background-color);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+  padding: 0.35rem;
+}
+
+.searchInput {
+  width: 100%;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 5px;
+  padding: 0.32rem 0.45rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.optionList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  max-height: 140px;
+  overflow: auto;
+}
+
+.optionButton {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 0.28rem 0.35rem;
+  cursor: pointer;
+  color: var(--ifm-color-emphasis-900);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.optionButton:hover {
   background: var(--ifm-color-emphasis-100);
 }
 
-.olderVersion {
-  font-family: var(--ifm-font-family-monospace);
-  font-size: 0.9rem;
+.emptyOption {
+  padding: 0.3rem 0.35rem;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.78rem;
+}
+
+.latestTag {
+  border: 1px solid var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-dark);
+  background: var(--ifm-color-primary-lightest);
+  border-radius: 999px;
+  padding: 0.04rem 0.35rem;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 560px) {
+  .controlRow {
+    align-items: stretch;
+  }
+
+  .dropdown {
+    width: 100%;
+    flex-basis: 100%;
+  }
 }
 
 .warning {

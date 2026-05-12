@@ -105,53 +105,114 @@ function FirmwareGroupCard({
   group: FirmwareGroup;
   baseUrl: string;
 }) {
-  const [expanded, setExpanded] = useState(false);
-  const [latest, ...older] = group.versions;
+  const [latest] = group.versions;
+  const [versionSearch, setVersionSearch] = useState("");
+  const [selectedVersion, setSelectedVersion] = useState<FirmwareVersion | null>(
+    null,
+  );
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = React.useRef<HTMLDivElement | null>(null);
+  const allVersions = group.versions;
+
+  const filteredVersions = useMemo(() => {
+    const q = versionSearch.trim().toLowerCase();
+    if (!q) return allVersions;
+    return allVersions.filter((v) => v.version.toLowerCase().includes(q));
+  }, [allVersions, versionSearch]);
+
+  useEffect(() => {
+    const hasSelected = selectedVersion
+      ? allVersions.some((v) => v.version === selectedVersion.version)
+      : false;
+    if (hasSelected) return;
+    setSelectedVersion(allVersions[0] ?? null);
+  }, [allVersions, selectedVersion]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onMouseDown = (event: MouseEvent) => {
+      if (!menuRef.current) return;
+      if (menuRef.current.contains(event.target as Node)) return;
+      setMenuOpen(false);
+    };
+    document.addEventListener("mousedown", onMouseDown);
+    return () => document.removeEventListener("mousedown", onMouseDown);
+  }, [menuOpen]);
+
   if (!latest) return null;
 
   return (
     <div className={styles.card}>
       <div className={styles.cardHeader}>
-        <div>
-          <h3 className={styles.cardTitle}>
-            {group.hwRev.toUpperCase()} {group.type}
-          </h3>
-          <p className={styles.cardSubtitle}>
-            Latest version: <code>{latest.version}</code>
-          </p>
+        <div className={styles.identityBlock}>
+          <h3 className={styles.cardTitle}>{group.hwRev.toUpperCase()}</h3>
+          <p className={styles.cardSubtitle}>{group.type}</p>
         </div>
-        <FlashButton
-          group={group}
-          version={latest}
-          baseUrl={baseUrl}
-          label={`Flash latest (${latest.version})`}
-        />
+        <div className={styles.latestPill}>Latest v{latest.version}</div>
       </div>
 
-      {older.length > 0 && (
-        <div className={styles.olderSection}>
-          <button
-            type="button"
-            className={styles.toggleButton}
-            onClick={() => setExpanded((e) => !e)}
-            aria-expanded={expanded}
-          >
-            {expanded
-              ? "Hide older versions"
-              : `Show older versions (${older.length})`}
-          </button>
-          {expanded && (
-            <ul className={styles.olderList}>
-              {older.map((v) => (
-                <li key={v.version} className={styles.olderItem}>
-                  <span className={styles.olderVersion}>v{v.version}</span>
-                  <FlashButton group={group} version={v} baseUrl={baseUrl} />
-                </li>
-              ))}
-            </ul>
-          )}
+      <div className={styles.olderSection}>
+        <div className={styles.olderPicker}>
+          <div className={styles.searchLabel}>Firmware version</div>
+          <div className={styles.controlRow}>
+            <div className={styles.dropdown} ref={menuRef}>
+              <button
+                type="button"
+                className={styles.dropdownTrigger}
+                onClick={() => setMenuOpen((open) => !open)}
+                aria-expanded={menuOpen}
+              >
+                <span>
+                  {selectedVersion ? `v${selectedVersion.version}` : "Choose version"}
+                </span>
+                <span aria-hidden>▾</span>
+              </button>
+              {menuOpen && (
+                <div className={styles.dropdownMenu}>
+                  <input
+                    type="text"
+                    className={styles.searchInput}
+                    placeholder="Search version..."
+                    value={versionSearch}
+                    onChange={(e) => setVersionSearch(e.target.value)}
+                  />
+                  <ul className={styles.optionList}>
+                    {filteredVersions.length === 0 ? (
+                      <li className={styles.emptyOption}>No versions match</li>
+                    ) : (
+                      filteredVersions.map((v) => (
+                        <li key={v.version}>
+                          <button
+                            type="button"
+                            className={styles.optionButton}
+                            onClick={() => {
+                              setSelectedVersion(v);
+                              setMenuOpen(false);
+                            }}
+                          >
+                            <span>v{v.version}</span>
+                            {v.version === latest.version && (
+                              <span className={styles.latestTag}>latest</span>
+                            )}
+                          </button>
+                        </li>
+                      ))
+                    )}
+                  </ul>
+                </div>
+              )}
+            </div>
+            {selectedVersion && (
+              <FlashButton
+                group={group}
+                version={selectedVersion}
+                baseUrl={baseUrl}
+                label={`Flash v${selectedVersion.version}`}
+              />
+            )}
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
