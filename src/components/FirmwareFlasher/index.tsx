@@ -24,9 +24,6 @@ function useEspWebToolsLoader() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     let cancelled = false;
-    // Dynamic import so the package is only bundled into a client-side
-    // chunk (esp-web-tools relies on browser-only APIs and cannot be
-    // executed during SSR).
     import("esp-web-tools/dist/web/install-button.js")
       .then(() => {
         if (!cancelled) setLoaded(true);
@@ -42,6 +39,11 @@ function useEspWebToolsLoader() {
   return loaded;
 }
 
+function firmwareAbsoluteUrl(baseUrl: string, file: string): string {
+  const relativePath = `${baseUrl}firmware/${file}`;
+  return new URL(relativePath, window.location.origin).href;
+}
+
 function buildManifest(group: FirmwareGroup, v: FirmwareVersion, baseUrl: string) {
   return {
     name: `FKMTime ${group.hwRev.toUpperCase()} ${group.type}`,
@@ -52,7 +54,7 @@ function buildManifest(group: FirmwareGroup, v: FirmwareVersion, baseUrl: string
         chipFamily: "ESP32-C3",
         parts: [
           {
-            path: `${baseUrl}firmware/${v.file}`,
+            path: firmwareAbsoluteUrl(baseUrl, v.file),
             offset: 0,
           },
         ],
