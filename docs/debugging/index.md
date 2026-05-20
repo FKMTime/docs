@@ -44,6 +44,7 @@ https://docs.fkmtime.com/debugging/e<code>
 | Code | Name | Description |
 |------|------|-------------|
 | [E10](/debugging/e10) | `BATTERY_INIT_FAILED` *(v4)* | Battery monitoring subsystem failed to initialize |
+| [E11](/debugging/e11) | `BATTERY_I2C_TIMEOUT` *(v4)* | Battery gauge I²C read timed out |
 
 ## LCD / Display (E20–E29)
 
@@ -51,6 +52,7 @@ https://docs.fkmtime.com/debugging/e<code>
 |------|------|-------------|
 | [E20](/debugging/e20) | `LCD_INIT_FAILED` *(v4)* | LCD display driver failed to initialize |
 | [E21](/debugging/e21) | `LCD_FRAMEBUFFER_ALLOC_FAILED` *(v4)* | Could not allocate LCD framebuffer in RAM |
+| [E22](/debugging/e22) | `LCD_FLUSH_TIMEOUT` *(v4)* | OLED framebuffer flush over I²C timed out |
 
 ## Stackmat (E30–E39)
 
@@ -109,6 +111,7 @@ https://docs.fkmtime.com/debugging/e<code>
 | Code | Name | Description |
 |------|------|-------------|
 | [E80](/debugging/e80) | `TASK_SPAWN_FAILED` | A required FreeRTOS task could not be created |
+| [E81](/debugging/e81) | `SHARED_I2C_TIMEOUT` *(v4)* | A transaction on the shared I²C bus timed out |
 
 ## Crash Recovery (E90–E99)
 
