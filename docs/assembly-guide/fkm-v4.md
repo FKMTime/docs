@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# FKM hardware revision v4
+# FKMTime hardware revision v4
 
-The hardware revision **v4** is the current production version of the FKM
+The hardware revision **v4** is the current production version of the FKMTime
 station. All production files (PCB, BOM, 3D-printed case, interactive BOM)
 are available in this repository under `/assembly-v4/`.
 

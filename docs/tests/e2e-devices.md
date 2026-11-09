@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # E2E devices tests
 
-You can test the communication of FKM devices with `micro-connector` using builtin E2E tests.
+You can test the communication of FKMTime devices with `micro-connector` using builtin E2E tests.
 
 E2E tests are just simulating many different solve scenarios on real devices, so you can easily detect logic bugs or whole firmware crashes.
 
