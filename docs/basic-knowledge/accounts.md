@@ -14,9 +14,9 @@ Go to **users** page
 
 ![img.png](../assets/accounts.png)
 
-Click on the plus button and choose between FKM and WCA account.
+Click on the plus button and choose between an FKMTime account and a WCA account.
 
-### FKM Account
+### FKMTime Account
 ![img.png](../assets/create-fkm-account.png)
 
 Just fill in the details and click save, user will be able to login with username and password you provided.

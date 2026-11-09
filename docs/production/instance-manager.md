@@ -63,7 +63,7 @@ docker run -d \
 
 On macOS and Windows, Docker Desktop runs containers inside a Linux VM,
 so containers do not have direct access to the host's Bluetooth or mDNS
-stack. That breaks BLE pairing of FKM stations and `fkmtime.local`
+stack. That breaks BLE pairing of FKMTime stations and `fkmtime.local`
 discovery out of the box. (On Linux this just works because Docker is
 native.)
 
