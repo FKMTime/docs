@@ -8,20 +8,16 @@ It is possible to use FKMTime for unofficial events. Basically, all you need to 
 
 ## How to add an unofficial event?
 
-1. Go to Unofficial Events page.
+1. Go to **Setup** → **Unofficial events**.
 
-![img.png](../assets/unofficial-events.png)
+2. Click **Add unofficial event**, select the event and set up its rounds: format, time limit (and whether it is cumulative) and cutoff. You can add up to 4 rounds.
 
-2. Click on the plus button and choose the event and adjust rounds and limits.
+3. Click **Add unofficial event**.
 
-![img.png](../assets/create-unofficial-event.png)
+4. That's it! Now everything works the same as for official events.
 
-Then click on "Add" button.
+You can change the rounds later with **Edit rounds**, or remove the event with **Delete event**.
 
-3. That's it! Now everything works the same as for official events.
+## Entering unofficial events results into Cubing Contests
 
-## Entering unofficial events results into CubingContests
-
-If you want to enter unofficial events results into CubingContests, you need to enter CubingContests API key in competition settings.
-
-![img.png](../assets/competition-settings.png)
+If you want to enter unofficial events results into Cubing Contests, you need to enter the **CubingContests token** in the competition settings, see [Importing competition](./importing-competition.md#cubing-contests).

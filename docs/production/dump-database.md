@@ -8,24 +8,13 @@ It is a good practice to dump the database after competition so it can be used f
 
 ## Dumping the database
 
-1. Enter the database container:
+Run the following command in the directory with the instance's
+`docker-compose.yml` file:
 
 ```bash
-docker exec -it fkmtime-database bash;
+docker compose exec -T database pg_dump -d fkm_time > dump.sql
 ```
 
-2. Run the following command in the container:
-
-```bash
-pg_dump -d fkm_time > dump.sql;
-```
-
-This command will dump the database to `dump.sql` file in the Docker container.
-
-3. Copy the dump file to the host machine:
-
-```bash
-docker cp fkmtime-database:/dump.sql dump.sql;
-```
+This command will dump the database to the `dump.sql` file on the host machine.
 
 You can read about importing the database into development environment in the [Importing database dump](/development/importing-database-dump) section.
