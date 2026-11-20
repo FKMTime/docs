@@ -3,21 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
-<title data-rh="true">Database structure | FKMTime</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" property="og:type" content="website"><meta data-rh="true" property="og:url" content="https://docs.fkmtime.com"><meta data-rh="true" property="og:image" content="https://docs.fkmtime.com/img/social-card.png"><meta data-rh="true" property="og:image:width" content="1200"><meta data-rh="true" property="og:image:height" content="630"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" name="twitter:description" content="Open-source documentation for FKMTime — run speedcubing competitions without scorecards. Setup guides, hardware assembly, firmware flashing and debugging."><meta data-rh="true" name="twitter:image" content="https://docs.fkmtime.com/img/social-card.png"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="description" content="FKMTime uses PostgreSQL database to store all the data. The database structure is shown below."><meta data-rh="true" property="og:description" content="FKMTime uses PostgreSQL database to store all the data. The database structure is shown below."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.fkmtime.com/basic-knowledge/database-structure"><link data-rh="true" rel="alternate" href="https://docs.fkmtime.com/basic-knowledge/database-structure" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.fkmtime.com/basic-knowledge/database-structure" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Basic knowledge","item":"https://docs.fkmtime.com/category/basic-knowledge"},{"@type":"ListItem","position":2,"name":"Database structure","item":"https://docs.fkmtime.com/basic-knowledge/database-structure"}]}</script><meta property="og:title" content="FKMTime Documentation — Scorecard-free Speedcubing System">
+<title data-rh="true">Database structure | FKMTime</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" property="og:type" content="website"><meta data-rh="true" property="og:url" content="https://docs.fkmtime.com"><meta data-rh="true" property="og:image" content="https://docs.fkmtime.com/img/social-card.png"><meta data-rh="true" property="og:image:width" content="1200"><meta data-rh="true" property="og:image:height" content="630"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" name="twitter:description" content="Open-source documentation for FKMTime — run speedcubing competitions without scorecards. Setup guides, firmware flashing and debugging."><meta data-rh="true" name="twitter:image" content="https://docs.fkmtime.com/img/social-card.png"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="description" content="FKMTime uses PostgreSQL database to store all the data. The source of truth is"><meta data-rh="true" property="og:description" content="FKMTime uses PostgreSQL database to store all the data. The source of truth is"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.fkmtime.com/basic-knowledge/database-structure"><link data-rh="true" rel="alternate" href="https://docs.fkmtime.com/basic-knowledge/database-structure" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.fkmtime.com/basic-knowledge/database-structure" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Basic knowledge","item":"https://docs.fkmtime.com/category/basic-knowledge"},{"@type":"ListItem","position":2,"name":"Database structure","item":"https://docs.fkmtime.com/basic-knowledge/database-structure"}]}</script><meta property="og:title" content="FKMTime Documentation — Scorecard-free Speedcubing System">
 <meta name="twitter:title" content="FKMTime Documentation — Scorecard-free Speedcubing System"><link rel="stylesheet" href="/assets/css/styles.9626731d.css">
-<script src="/assets/js/runtime~main.51e0ce49.js" defer="defer"></script>
-<script src="/assets/js/main.5d153d62.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.efb34564.js" defer="defer"></script>
+<script src="/assets/js/main.c60f84a0.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_Nqtg" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">FKMTime</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/category/basic-knowledge">Documentation</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/FKMTime/FKMTime" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_hVo_"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_yiJw colorModeToggle_Op2I"><button class="clean-btn toggleButton_e5oY toggleButtonDisabled_bpDt" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_drNz lightToggleIcon_Gije"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_drNz darkToggleIcon_rpNu"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_drNz systemToggleIcon_UsB6"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_vYyX"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_bmYy"><div class="docsWrapper_Y08q"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_TH3E" type="button"></button><div class="docRoot_cKRm"><aside class="theme-doc-sidebar-container docSidebarContainer_jCX2"><div class="sidebarViewport_Aszy"><div class="sidebar_Rkb8"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_gNI6"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_kAtW menu__link menu__link--sublist menu__link--active" href="/category/basic-knowledge"><span title="Basic knowledge" class="categoryLinkLabel_nM4B">Basic knowledge</span></a><button aria-label="Collapse sidebar category &#x27;Basic knowledge&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/how-it-works"><span title="How FKMTime works?" class="linkLabel_T24u">How FKMTime works?</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/importing-competition"><span title="Importing competition" class="linkLabel_T24u">Importing competition</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/accounts"><span title="Accounts" class="linkLabel_T24u">Accounts</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/adding-devices"><span title="Adding devices to database" class="linkLabel_T24u">Adding devices to database</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/assigning-cards"><span title="Assigning cards &amp; check-in" class="linkLabel_T24u">Assigning cards &amp; check-in</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/competition-volunteers"><span title="Competition Volunteers" class="linkLabel_T24u">Competition Volunteers</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/selecting-event"><span title="Selecting current event" class="linkLabel_T24u">Selecting current event</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/how-updates-work"><span title="How updates work?" class="linkLabel_T24u">How updates work?</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/unofficial-events"><span title="Unofficial events" class="linkLabel_T24u">Unofficial events</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/basic-knowledge/database-structure"><span title="Database structure" class="linkLabel_T24u">Database structure</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_kAtW menu__link menu__link--sublist" href="/category/development"><span title="Development" class="categoryLinkLabel_nM4B">Development</span></a><button aria-label="Expand sidebar category &#x27;Development&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/firmware-flashing"><span title="Firmware flashing" class="linkLabel_T24u">Firmware flashing</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_kAtW menu__link menu__link--sublist" href="/category/tests"><span title="Tests" class="categoryLinkLabel_nM4B">Tests</span></a><button aria-label="Expand sidebar category &#x27;Tests&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_kAtW menu__link menu__link--sublist" href="/category/production"><span title="Production" class="categoryLinkLabel_nM4B">Production</span></a><button aria-label="Expand sidebar category &#x27;Production&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_kAtW menu__link menu__link--sublist" href="/category/assembly-guide"><span title="Assembly Guide" class="categoryLinkLabel_nM4B">Assembly Guide</span></a><button aria-label="Expand sidebar category &#x27;Assembly Guide&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_kAtW menu__link menu__link--sublist" href="/debugging"><span title="Error Codes" class="categoryLinkLabel_nM4B">Error Codes</span></a><button aria-label="Expand sidebar category &#x27;Error Codes&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_YGQW"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_SeBl"><div class="docItemContainer_fUVN"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_PSos" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_jvLJ"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/category/basic-knowledge"><span>Basic knowledge</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Database structure</span></li></ul></nav><div class="tocCollapsible_AEXE theme-doc-toc-mobile tocMobile_xyIr"><button type="button" class="clean-btn tocCollapsibleButton_cqro">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Database structure</h1></header>
-<p>FKMTime uses PostgreSQL database to store all the data. The database structure is shown below.</p>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_Nqtg" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><b class="navbar__title text--truncate">FKMTime</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/category/basic-knowledge">Documentation</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/FKMTime/FKMTime" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_hVo_"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_yiJw colorModeToggle_Op2I"><button class="clean-btn toggleButton_e5oY toggleButtonDisabled_bpDt" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_drNz lightToggleIcon_Gije"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_drNz darkToggleIcon_rpNu"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_drNz systemToggleIcon_UsB6"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_vYyX"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_bmYy"><div class="docsWrapper_Y08q"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_TH3E" type="button"></button><div class="docRoot_cKRm"><aside class="theme-doc-sidebar-container docSidebarContainer_jCX2"><div class="sidebarViewport_Aszy"><div class="sidebar_Rkb8"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_gNI6"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_kAtW menu__link menu__link--sublist menu__link--active" href="/category/basic-knowledge"><span title="Basic knowledge" class="categoryLinkLabel_nM4B">Basic knowledge</span></a><button aria-label="Collapse sidebar category &#x27;Basic knowledge&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/how-it-works"><span title="How FKMTime works?" class="linkLabel_T24u">How FKMTime works?</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/importing-competition"><span title="Importing competition" class="linkLabel_T24u">Importing competition</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/accounts"><span title="Accounts" class="linkLabel_T24u">Accounts</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/adding-devices"><span title="Adding devices to database" class="linkLabel_T24u">Adding devices to database</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/assigning-cards"><span title="Assigning cards &amp; check-in" class="linkLabel_T24u">Assigning cards &amp; check-in</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/competition-volunteers"><span title="Competition Volunteers" class="linkLabel_T24u">Competition Volunteers</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/selecting-event"><span title="Selecting current group" class="linkLabel_T24u">Selecting current group</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/how-updates-work"><span title="How updates work?" class="linkLabel_T24u">How updates work?</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/basic-knowledge/unofficial-events"><span title="Unofficial events" class="linkLabel_T24u">Unofficial events</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/basic-knowledge/database-structure"><span title="Database structure" class="linkLabel_T24u">Database structure</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_kAtW menu__link menu__link--sublist" href="/category/development"><span title="Development" class="categoryLinkLabel_nM4B">Development</span></a><button aria-label="Expand sidebar category &#x27;Development&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/firmware-flashing"><span title="Firmware flashing" class="linkLabel_T24u">Firmware flashing</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_kAtW menu__link menu__link--sublist" href="/category/tests"><span title="Tests" class="categoryLinkLabel_nM4B">Tests</span></a><button aria-label="Expand sidebar category &#x27;Tests&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_kAtW menu__link menu__link--sublist" href="/category/production"><span title="Production" class="categoryLinkLabel_nM4B">Production</span></a><button aria-label="Expand sidebar category &#x27;Production&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_kAtW menu__link menu__link--sublist" href="/debugging"><span title="Error Codes" class="categoryLinkLabel_nM4B">Error Codes</span></a><button aria-label="Expand sidebar category &#x27;Error Codes&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_YGQW"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_SeBl"><div class="docItemContainer_fUVN"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_PSos" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_jvLJ"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/category/basic-knowledge"><span>Basic knowledge</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Database structure</span></li></ul></nav><div class="tocCollapsible_AEXE theme-doc-toc-mobile tocMobile_xyIr"><button type="button" class="clean-btn tocCollapsibleButton_cqro">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Database structure</h1></header>
+<p>FKMTime uses PostgreSQL database to store all the data. The source of truth is
+<a href="https://github.com/FKMTime/FKMTime/blob/main/backend/prisma/schema.prisma" target="_blank" rel="noopener noreferrer" class=""><code>backend/prisma/schema.prisma</code></a>
+in the FKMTime repository; this page describes the tables in it.</p>
 <div class="theme-admonition theme-admonition-note admonition_ro8r alert alert--secondary"><div class="admonitionHeading_qAQh"><span class="admonitionIcon_QoUJ"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_Dh5g"><p>We use Prisma ORM to interact with the database. You can read more about Prisma <a href="https://www.prisma.io/" target="_blank" rel="noopener noreferrer" class="">here</a>.</p></div></div>
 <div class="theme-admonition theme-admonition-info admonition_ro8r alert alert--info"><div class="admonitionHeading_qAQh"><span class="admonitionIcon_QoUJ"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_Dh5g"><p>We are using camelCase in our code, although the database is using snake_case. Prisma is taking care of the conversion using <code>@map</code>.</p></div></div>
 <div class="theme-admonition theme-admonition-info admonition_ro8r alert alert--info"><div class="admonitionHeading_qAQh"><span class="admonitionIcon_QoUJ"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_Dh5g"><p>We are using UUIDs as primary keys for all tables.</p></div></div>
-<p><img decoding="async" loading="lazy" alt="img.png" src="/assets/images/db-1e931860892ba0f82aa597d5dc948eea.png" width="1565" height="1412" class="img__QGr"></p>
 <h2 class="anchor anchorTargetStickyNavbar_UXZL" id="tables">Tables<a href="#tables" class="hash-link" aria-label="Direct link to Tables" title="Direct link to Tables" translate="no">​</a></h2>
 <h3 class="anchor anchorTargetStickyNavbar_UXZL" id="competition">Competition<a href="#competition" class="hash-link" aria-label="Direct link to Competition" title="Direct link to Competition" translate="no">​</a></h3>
 <p>There is one record in this table. It stores the competition settings, WCIF and other general data. Most of the data in this table is inserted during the import from the WCA website.</p>
@@ -25,18 +26,32 @@
 <li class=""><code>id</code> - unique identifier</li>
 <li class=""><code>name</code> - competition name</li>
 <li class=""><code>wcaId</code> - WCA competition ID</li>
-<li class=""><code>sendingResultsFrequency</code> - enum, stores how often the results are sent to the WCA Live/CubingContests</li>
 <li class=""><code>countryIso2</code> - country ISO2 code</li>
+<li class=""><code>wcif</code> - JSON, stores public WCIF of the competition</li>
+<li class=""><code>sendingResultsFrequency</code> - <a href="#sendingresultsfrequency" class="">SendingResultsFrequency</a>, how often results are sent</li>
+<li class=""><code>scoretakingToken</code> - token taken from WCA Live for entering results</li>
+<li class=""><code>scoretakingTokenUpdatedAt</code> - date the scoretaking token was last saved</li>
+<li class=""><code>wcaScoretakingSoftware</code> - the competition&#x27;s scoretaking software as set on the WCA website, null until first read</li>
+<li class=""><code>wcaScoretakingCheckedAt</code> - date FKMTime last read it</li>
+<li class=""><code>wcaLiveConnectedById</code>, <code>wcaLiveConnectedWcaUserId</code>, <code>wcaLiveConnectedName</code> - the account results are entered as in WCA integrated live results</li>
+<li class=""><code>wcaLiveCanEnterScores</code> - boolean, if that account can enter scores</li>
+<li class=""><code>wcaLiveAccessToken</code>, <code>wcaLiveRefreshToken</code> - encrypted tokens of that account</li>
+<li class=""><code>wcaLiveTokenExpiresAt</code> - date the access token expires</li>
+<li class=""><code>wcaLiveConnectionBrokenAt</code> - date the connection stopped working, if it did</li>
+<li class=""><code>openRoundsAutomatically</code> - boolean, if FKMTime opens later rounds in WCA integrated live results itself (off: a person does it)</li>
+<li class=""><code>cubingContestsToken</code> - token taken from Cubing Contests for entering results</li>
+<li class=""><code>defaultLocale</code> - default language of the panel</li>
 <li class=""><code>shouldUpdateDevices</code> - boolean, if the devices should be updated with new releases</li>
 <li class=""><code>shouldChangeGroupsAutomatically</code> - boolean, if the groups should be changed automatically</li>
-<li class=""><code>wifiSsid</code> - wifi SSID, that FKMTime devices will be using to connect to micro-connector</li>
-<li class=""><code>wifiPassword</code> - wifi password</li>
-<li class=""><code>mdns</code> - boolean, whether mDNS should be used to discover devices</li>
-<li class=""><code>ws_url</code> - websocket URL if mDNS is not used</li>
-<li class=""><code>wcif</code> - JSON, stores public WCIF of the competition</li>
-<li class=""><code>scoretakingToken</code> - token taken from WCA Live for entering results</li>
-<li class=""><code>cubingContestToken</code> - token taken from CubingContests for entering results</li>
-<li class=""><code>scoretakingTokenExpiresAt</code> - date, after this date token may have expired (7 days after saving the new token)</li>
+<li class=""><code>wifiSsid</code> - Wi-Fi SSID that FKMTime devices will be using to connect to micro-connector</li>
+<li class=""><code>wifiPassword</code> - Wi-Fi password</li>
+<li class=""><code>mdns</code> - boolean, whether mDNS should be used to discover the server</li>
+<li class=""><code>wsUrl</code> - websocket URL if mDNS is not used</li>
+<li class=""><code>fkmToken</code> - token that FKMTime devices use</li>
+<li class=""><code>secureRfid</code> - boolean, if secure RFID is used</li>
+<li class=""><code>useFkmTimeDevices</code> - boolean, if the competition uses FKMTime devices</li>
+<li class=""><code>soundEnabled</code> - boolean, if devices play sounds</li>
+<li class=""><code>buzzerVolume</code> - buzzer volume for v4 stations, null leaves each station on its own setting</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_UXZL" id="unofficialevent">UnofficialEvent<a href="#unofficialevent" class="hash-link" aria-label="Direct link to UnofficialEvent" title="Direct link to UnofficialEvent" translate="no">​</a></h3>
 <p>This table stores unofficial events that are held during the competition.</p>
@@ -54,6 +69,7 @@
 <li class=""><code>name</code> - room name</li>
 <li class=""><code>color</code> - room color</li>
 <li class=""><code>currentGroupIds</code> - array of WCIF group IDs that are currently taking place in the room, may be empty</li>
+<li class=""><code>startedGroupIds</code> - array of every WCIF group ID the room has started, so a round counts as over only once all of its groups have run</li>
 <li class=""><code>createdAt</code> - date of creation</li>
 <li class=""><code>updatedAt</code> - date of last update</li>
 </ul>
@@ -63,8 +79,16 @@
 <li class=""><code>id</code> - unique identifier</li>
 <li class=""><code>name</code> - device name, can be changed</li>
 <li class=""><code>espId</code> - ESP32 device ID</li>
-<li class=""><code>type</code> - device type (enum)</li>
+<li class=""><code>signKey</code> - key the device signs its messages with</li>
+<li class=""><code>type</code> - <a href="#devicetype" class="">DeviceType</a></li>
 <li class=""><code>batteryPercentage</code> - battery percentage, updated automatically</li>
+<li class=""><code>hwVersion</code> - <a href="#hardwareversion" class="">HardwareVersion</a></li>
+<li class=""><code>firmwareVersion</code> - firmware version the device runs</li>
+<li class=""><code>retiredAt</code> - set instead of deleting a device that has history, so its attempts keep their station</li>
+<li class=""><code>customRoundId</code> - round the station takes attempts for instead of its room&#x27;s groups, null while it follows its room</li>
+<li class=""><code>customRoundSetAt</code>, <code>customRoundSetById</code> - when and by which <a href="#user" class="">User</a> the custom round was set</li>
+<li class=""><code>tutorialEndsAt</code> - while in the future, the station takes tutorial solves, which are never saved</li>
+<li class=""><code>tutorialStartedById</code> - <a href="#user" class="">User</a> that started the tutorial</li>
 <li class=""><code>roomId</code> - <a href="#room" class="">Room</a></li>
 <li class=""><code>createdAt</code> - date of creation</li>
 <li class=""><code>updatedAt</code> - date of last update</li>
@@ -75,16 +99,17 @@
 <li class=""><code>id</code> - unique identifier</li>
 <li class=""><code>password</code> - hashed password, only available for FKMTime accounts</li>
 <li class=""><code>username</code> - username, only available for FKMTime accounts</li>
-<li class=""><code>role</code> - user role (enum)</li>
+<li class=""><code>roles</code> - array of <a href="#role" class="">Role</a></li>
 <li class=""><code>fullName</code> - full name of the user</li>
 <li class=""><code>wcaUserId</code> - WCA user ID, only available for WCA accounts</li>
-<li class=""><code>isWcaAdmin</code> - boolean, if the user is WCA admin, only available for WCA accounts</li>
 <li class=""><code>wcaAccessToken</code> - WCA access token, only available for WCA accounts</li>
+<li class=""><code>tokenVersion</code> - bumped when the password changes, so sessions signed in before stop working</li>
+<li class=""><code>avatarUrl</code> - WCA avatar URL</li>
 <li class=""><code>createdAt</code> - date of creation</li>
 <li class=""><code>updatedAt</code> - date of last update</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_UXZL" id="quickaction">QuickAction<a href="#quickaction" class="hash-link" aria-label="Direct link to QuickAction" title="Direct link to QuickAction" translate="no">​</a></h3>
-<p>This table stores quick actions that can be used to simplify resolving incidents process by delegats.</p>
+<p>This table stores quick actions that can be used to simplify resolving incidents process by delegates.</p>
 <ul>
 <li class=""><code>id</code> - unique identifier</li>
 <li class=""><code>name</code> - action name</li>
@@ -100,6 +125,7 @@
 <ul>
 <li class=""><code>id</code> - unique identifier</li>
 <li class=""><code>registrantId</code> - WCA registrant ID</li>
+<li class=""><code>wcaRegistrationId</code> - the WCA registration&#x27;s database id, null for people created on site</li>
 <li class=""><code>name</code> - full name</li>
 <li class=""><code>wcaId</code> - WCA ID</li>
 <li class=""><code>countryIso2</code> - country ISO2 code</li>
@@ -116,9 +142,13 @@
 <li class=""><code>personId</code> - <a href="#person" class="">Person</a></li>
 <li class=""><code>deviceId</code> - <a href="#device" class="">Device</a> (can be null)</li>
 <li class=""><code>isAssigned</code> - boolean, if the activity is pre-assigned</li>
-<li class=""><code>isPresent</code> - boolean, if the person performed the activity</li>
+<li class=""><code>status</code> - <a href="#staffactivitystatus" class="">StaffActivityStatus</a></li>
 <li class=""><code>groupId</code> - WCIF group ID</li>
-<li class=""><code>role</code> - role of the person in the group (enum)</li>
+<li class=""><code>role</code> - <a href="#staffrole" class="">StaffRole</a>, role of the person in the group</li>
+<li class=""><code>comment</code> - comment</li>
+<li class=""><code>leftEarly</code> - boolean, left before the group ended (only with <code>PRESENT</code> or <code>LATE</code>)</li>
+<li class=""><code>noShow</code> - boolean, not coming for the rest of the day (only with <code>ABSENT</code>)</li>
+<li class=""><code>replacedById</code> - <a href="#person" class="">Person</a> who did the job instead (only with <code>REPLACED</code> or <code>ABSENT</code>)</li>
 <li class=""><code>createdAt</code> - date of creation</li>
 <li class=""><code>updatedAt</code> - date of last update</li>
 </ul>
@@ -126,10 +156,16 @@
 <p>This table stores all results that are entered during the competition.</p>
 <ul>
 <li class=""><code>id</code> - unique identifier</li>
-<li class=""><code>personId</code> - <a href="#Person" class="">Person</a></li>
+<li class=""><code>personId</code> - <a href="#person" class="">Person</a></li>
 <li class=""><code>eventId</code> - event ID, taken from <code>backend/src/events.ts</code></li>
 <li class=""><code>roundId</code> - round ID in WCIF format</li>
 <li class=""><code>isDoubleChecked</code> - boolean, if the result was already double-checked</li>
+<li class=""><code>doubleCheckedById</code> - <a href="#user" class="">User</a> that double-checked the result</li>
+<li class=""><code>doubleCheckedAt</code> - date of double-checking</li>
+<li class=""><code>removedAt</code> - set when the result was removed under Regulation 9t; it is kept, but left out of every list</li>
+<li class=""><code>removedById</code> - <a href="#user" class="">User</a> that removed it</li>
+<li class=""><code>removedReason</code> - why it was removed</li>
+<li class=""><code>removedByRulingOfId</code> - the <a href="#result" class="">Result</a> whose DNF ruling removed this one; restoring that result brings this one back</li>
 <li class=""><code>createdAt</code> - date of creation</li>
 <li class=""><code>updatedAt</code> - date of last update</li>
 </ul>
@@ -137,20 +173,101 @@
 <p>This table is the biggest table, it stores all attempts that are entered during the competition.</p>
 <ul>
 <li class=""><code>id</code> - unique identifier</li>
-<li class=""><code>sessionId</code> - unique identifier generated by FKMTime deice that prevents from entering the same attempt twice</li>
+<li class=""><code>sessionId</code> - unique identifier generated by FKMTime device that prevents from entering the same attempt twice</li>
 <li class=""><code>resultId</code> - <a href="#result" class="">Result</a></li>
 <li class=""><code>attemptNumber</code> - number of the attempt</li>
-<li class=""><code>replacedBy</code> - id of the attempt that replaced this one (if extra attempt was granted)</li>
+<li class=""><code>replacedBy</code> - number of the attempt that replaced this one (if extra attempt was granted)</li>
 <li class=""><code>comment</code> - comment for the attempt, added by the delegate</li>
-<li class=""><code>type</code> - <a href="#attempttype" class="">AttemptType</a>, see below</li>
-<li class=""><code>status</code> - <a href="#attemptstatus" class="">AttemptStatus</a>, see below</li>
+<li class=""><code>type</code> - <a href="#attempttype" class="">AttemptType</a></li>
+<li class=""><code>status</code> - <a href="#attemptstatus" class="">AttemptStatus</a></li>
+<li class=""><code>penalty</code> - penalty in seconds added to the time</li>
 <li class=""><code>value</code> - time in centiseconds</li>
-<li class=""><code>originalTime</code> - exact time taken from stackmat, in miliseconds</li>
+<li class=""><code>originalTime</code> - exact time taken from stackmat, in milliseconds</li>
+<li class=""><code>inspectionTime</code> - inspection time measured by the device</li>
 <li class=""><code>judgeId</code> - <a href="#person" class="">Person</a> that judged the attempt</li>
+<li class=""><code>scramblerId</code> - <a href="#person" class="">Person</a> that scrambled the attempt</li>
+<li class=""><code>scrambledAt</code> - date of scrambling</li>
 <li class=""><code>deviceId</code> - <a href="#device" class="">Device</a> that was used to enter the attempt (can be null if attempt was entered manually)</li>
 <li class=""><code>solvedAt</code> - date of finishing the solve</li>
+<li class=""><code>updatedById</code> - <a href="#user" class="">User</a> that last edited the attempt</li>
+<li class=""><code>extraGrantId</code> - <a href="#extragrant" class="">ExtraGrant</a> this attempt belongs to</li>
+<li class=""><code>statusBeforeGrant</code>, <code>statusInGrant</code>, <code>replacedByInGrant</code> - the attempt&#x27;s state before and within an extra grant, so the grant can be undone</li>
 <li class=""><code>createdAt</code> - date of creation</li>
 <li class=""><code>updatedAt</code> - date of last update</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_UXZL" id="extragrant">ExtraGrant<a href="#extragrant" class="hash-link" aria-label="Direct link to ExtraGrant" title="Direct link to ExtraGrant" translate="no">​</a></h3>
+<p>An extra granted for all attempts of a result so far.</p>
+<ul>
+<li class=""><code>id</code> - unique identifier</li>
+<li class=""><code>resultId</code> - <a href="#result" class="">Result</a></li>
+<li class=""><code>useFreshSet</code> - boolean, if the extras use a fresh scramble set</li>
+<li class=""><code>createdById</code> - <a href="#user" class="">User</a> that granted it</li>
+<li class=""><code>createdAt</code> - date of creation</li>
+<li class=""><code>restoredAt</code> - date the grant was undone</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_UXZL" id="attempteditlog">AttemptEditLog<a href="#attempteditlog" class="hash-link" aria-label="Direct link to AttemptEditLog" title="Direct link to AttemptEditLog" translate="no">​</a></h3>
+<p>Every change to an attempt, with the attempt&#x27;s values before the change.</p>
+<ul>
+<li class=""><code>id</code> - unique identifier</li>
+<li class=""><code>attemptId</code> - <a href="#attempt" class="">Attempt</a></li>
+<li class=""><code>editedAt</code> - date of the change</li>
+<li class=""><code>editedById</code> - <a href="#user" class="">User</a> that made the change</li>
+<li class=""><code>comment</code> - why the attempt was changed</li>
+<li class=""><code>value</code>, <code>penalty</code>, <code>status</code>, <code>type</code>, <code>attemptNumber</code>, <code>replacedBy</code>, <code>judgeId</code>, <code>scramblerId</code>, <code>deviceId</code>, <code>attemptComment</code> - the attempt&#x27;s values</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_UXZL" id="noteworthyincident">NoteworthyIncident<a href="#noteworthyincident" class="hash-link" aria-label="Direct link to NoteworthyIncident" title="Direct link to NoteworthyIncident" translate="no">​</a></h3>
+<p>Incidents marked as noteworthy, for example to report to the WCA.</p>
+<ul>
+<li class=""><code>id</code> - unique identifier</li>
+<li class=""><code>title</code> - title</li>
+<li class=""><code>description</code> - description</li>
+<li class=""><code>attemptId</code> - <a href="#attempt" class="">Attempt</a></li>
+<li class=""><code>createdById</code> - <a href="#user" class="">User</a> that created it</li>
+<li class=""><code>createdAt</code> - date of creation</li>
+<li class=""><code>updatedAt</code> - date of last update</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_UXZL" id="manualincident">ManualIncident<a href="#manualincident" class="hash-link" aria-label="Direct link to ManualIncident" title="Direct link to ManualIncident" translate="no">​</a></h3>
+<p>Incidents entered by hand, not tied to an attempt in the system.</p>
+<ul>
+<li class=""><code>id</code> - unique identifier</li>
+<li class=""><code>personId</code> - <a href="#person" class="">Person</a></li>
+<li class=""><code>roundId</code> - round ID in WCIF format</li>
+<li class=""><code>description</code> - description</li>
+<li class=""><code>attempt</code> - attempt it is about</li>
+<li class=""><code>isNoteworthy</code> - boolean, if the incident is noteworthy</li>
+<li class=""><code>createdById</code> - <a href="#user" class="">User</a> that created it</li>
+<li class=""><code>createdAt</code> - date of creation</li>
+<li class=""><code>updatedAt</code> - date of last update</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_UXZL" id="warning">Warning<a href="#warning" class="hash-link" aria-label="Direct link to Warning" title="Direct link to Warning" translate="no">​</a></h3>
+<p>Warnings given to competitors.</p>
+<ul>
+<li class=""><code>id</code> - unique identifier</li>
+<li class=""><code>description</code> - description</li>
+<li class=""><code>personId</code> - <a href="#person" class="">Person</a> that received the warning</li>
+<li class=""><code>createdById</code> - <a href="#user" class="">User</a> that gave it</li>
+<li class=""><code>createdAt</code> - date of creation</li>
+<li class=""><code>updatedAt</code> - date of last update</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_UXZL" id="livesync">LiveSync<a href="#livesync" class="hash-link" aria-label="Direct link to LiveSync" title="Direct link to LiveSync" translate="no">​</a></h3>
+<p>Where each result stands in WCA integrated live results.</p>
+<ul>
+<li class=""><code>resultId</code> - <a href="#result" class="">Result</a></li>
+<li class=""><code>status</code> - <a href="#livesyncstatus" class="">LiveSyncStatus</a></li>
+<li class=""><code>sentHash</code> - hash of the attempts last sent, compared with what the WCA holds</li>
+<li class=""><code>sentAt</code> - date of sending</li>
+<li class=""><code>checks</code> - number of read-backs that didn&#x27;t match yet</li>
+<li class=""><code>removedFromRound</code> - boolean, FKMTime removed the competitor from the round, so restoring the result has to add them back first</li>
+<li class=""><code>error</code> - last error</li>
+<li class=""><code>updatedAt</code> - date of last update</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_UXZL" id="liveclear">LiveClear<a href="#liveclear" class="hash-link" aria-label="Direct link to LiveClear" title="Direct link to LiveClear" translate="no">​</a></h3>
+<p>A result deleted in FKMTime whose copy in WCA integrated live results still has to be cleared.</p>
+<ul>
+<li class=""><code>id</code> - unique identifier</li>
+<li class=""><code>roundId</code> - round ID in WCIF format</li>
+<li class=""><code>wcaRegistrationId</code> - WCA registration ID of the competitor</li>
+<li class=""><code>createdAt</code> - date of creation</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_UXZL" id="scramblingdevice">ScramblingDevice<a href="#scramblingdevice" class="hash-link" aria-label="Direct link to ScramblingDevice" title="Direct link to ScramblingDevice" translate="no">​</a></h3>
 <p>This table stores data about scrambling devices (e. g. laptops) that are used during the competition.</p>
@@ -158,7 +275,8 @@
 <li class=""><code>id</code> - unique identifier</li>
 <li class=""><code>name</code> - device name</li>
 <li class=""><code>encryptedToken</code> - token used to authenticate the device</li>
-<li class=""><code>encryptedOneTimeCode</code> - one-time code used to login on the device</li>
+<li class=""><code>encryptedOneTimeCode</code> - one-time code used to pair the device</li>
+<li class=""><code>oneTimeCodeExpiresAt</code> - date the one-time code stops working</li>
 <li class=""><code>roomId</code> - <a href="#room" class="">Room</a></li>
 <li class=""><code>createdAt</code> - date of creation</li>
 <li class=""><code>updatedAt</code> - date of last update</li>
@@ -189,15 +307,21 @@
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_UXZL" id="attemptstatus">AttemptStatus<a href="#attemptstatus" class="hash-link" aria-label="Direct link to AttemptStatus" title="Direct link to AttemptStatus" translate="no">​</a></h3>
 <ul>
+<li class=""><code>SCRAMBLED</code> - the attempt was scrambled, but not solved yet</li>
 <li class=""><code>STANDARD</code> - applied for all normal attempts</li>
 <li class=""><code>UNRESOLVED</code> - applied for incidents that need to be resolved</li>
 <li class=""><code>RESOLVED</code> - applied for resolved incidents, without extra</li>
 <li class=""><code>EXTRA_GIVEN</code> - applied for resolved incidents, with extra</li>
+<li class=""><code>VOIDED</code> - an attempt waiting for an extra that can never come, because the competitor missed the cutoff</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_UXZL" id="userrole">UserRole<a href="#userrole" class="hash-link" aria-label="Direct link to UserRole" title="Direct link to UserRole" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_UXZL" id="role">Role<a href="#role" class="hash-link" aria-label="Direct link to Role" title="Direct link to Role" translate="no">​</a></h3>
+<p>See <a class="" href="/basic-knowledge/accounts#roles">Accounts</a> for what each role can do.</p>
 <ul>
-<li class=""><code>ADMIN</code> - user with all permissions</li>
-<li class=""><code>STAFF</code> - user with permissions to check-in, assigning cards and viewing the results</li>
+<li class=""><code>ADMIN</code></li>
+<li class=""><code>ORGANIZER</code></li>
+<li class=""><code>DELEGATE</code></li>
+<li class=""><code>STAGE_LEADER</code></li>
+<li class=""><code>STAFF</code></li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_UXZL" id="devicetype">DeviceType<a href="#devicetype" class="hash-link" aria-label="Direct link to DeviceType" title="Direct link to DeviceType" translate="no">​</a></h3>
 <ul>
@@ -205,18 +329,41 @@
 <li class=""><code>ATTENDANCE_SCRAMBLER</code> - staff attendance device for scramblers</li>
 <li class=""><code>ATTENDANCE_RUNNER</code> - staff attendance device for runners</li>
 </ul>
+<h3 class="anchor anchorTargetStickyNavbar_UXZL" id="hardwareversion">HardwareVersion<a href="#hardwareversion" class="hash-link" aria-label="Direct link to HardwareVersion" title="Direct link to HardwareVersion" translate="no">​</a></h3>
+<ul>
+<li class=""><code>V3</code></li>
+<li class=""><code>V4</code></li>
+</ul>
 <h3 class="anchor anchorTargetStickyNavbar_UXZL" id="staffrole">StaffRole<a href="#staffrole" class="hash-link" aria-label="Direct link to StaffRole" title="Direct link to StaffRole" translate="no">​</a></h3>
 <ul>
 <li class=""><code>COMPETITOR</code> - competitor</li>
 <li class=""><code>JUDGE</code> - judge</li>
 <li class=""><code>RUNNER</code> - runner</li>
 <li class=""><code>SCRAMBLER</code> - scrambler</li>
+<li class=""><code>DELEGATE</code> - delegate</li>
+<li class=""><code>STAFF_OTHER</code> - other staff</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_UXZL" id="staffactivitystatus">StaffActivityStatus<a href="#staffactivitystatus" class="hash-link" aria-label="Direct link to StaffActivityStatus" title="Direct link to StaffActivityStatus" translate="no">​</a></h3>
+<ul>
+<li class=""><code>PRESENT</code> - was there</li>
+<li class=""><code>ABSENT</code> - wasn&#x27;t there</li>
+<li class=""><code>LATE</code> - came late</li>
+<li class=""><code>REPLACED</code> - someone else did the job</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_UXZL" id="sendingresultsfrequency">SendingResultsFrequency<a href="#sendingresultsfrequency" class="hash-link" aria-label="Direct link to SendingResultsFrequency" title="Direct link to SendingResultsFrequency" translate="no">​</a></h3>
 <ul>
-<li class=""><code>AFTER_SOLVE</code> - selected by default, results are sent to WCA Live/Cubing contestsafter each solve</li>
-<li class=""><code>EVERY_5_MINUTES</code> - results are sent to WCA Live/Cubing Contests every 5 minutes</li>
-<li class=""><code>NEVER</code> - results are not sent to WCA Live/Cubing Contests</li>
-</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_TieQ"><a href="https://github.com/FKMTime/docs/tree/main/docs/docs/basic-knowledge/database-structure.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_In_e" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_l0L_"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/basic-knowledge/unofficial-events"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Unofficial events</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/category/development"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Development</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_dXdN thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#tables" class="table-of-contents__link toc-highlight">Tables</a><ul><li><a href="#competition" class="table-of-contents__link toc-highlight">Competition</a></li><li><a href="#unofficialevent" class="table-of-contents__link toc-highlight">UnofficialEvent</a></li><li><a href="#room" class="table-of-contents__link toc-highlight">Room</a></li><li><a href="#device" class="table-of-contents__link toc-highlight">Device</a></li><li><a href="#user" class="table-of-contents__link toc-highlight">User</a></li><li><a href="#quickaction" class="table-of-contents__link toc-highlight">QuickAction</a></li><li><a href="#person" class="table-of-contents__link toc-highlight">Person</a></li><li><a href="#staffactivity" class="table-of-contents__link toc-highlight">StaffActivity</a></li><li><a href="#result" class="table-of-contents__link toc-highlight">Result</a></li><li><a href="#attempt" class="table-of-contents__link toc-highlight">Attempt</a></li><li><a href="#scramblingdevice" class="table-of-contents__link toc-highlight">ScramblingDevice</a></li><li><a href="#scrambleset" class="table-of-contents__link toc-highlight">ScrambleSet</a></li><li><a href="#scramble" class="table-of-contents__link toc-highlight">Scramble</a></li></ul></li><li><a href="#enums" class="table-of-contents__link toc-highlight">Enums</a><ul><li><a href="#attempttype" class="table-of-contents__link toc-highlight">AttemptType</a></li><li><a href="#attemptstatus" class="table-of-contents__link toc-highlight">AttemptStatus</a></li><li><a href="#userrole" class="table-of-contents__link toc-highlight">UserRole</a></li><li><a href="#devicetype" class="table-of-contents__link toc-highlight">DeviceType</a></li><li><a href="#staffrole" class="table-of-contents__link toc-highlight">StaffRole</a></li><li><a href="#sendingresultsfrequency" class="table-of-contents__link toc-highlight">SendingResultsFrequency</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
+<li class=""><code>AFTER_SOLVE</code> - selected by default, results are sent after each solve</li>
+<li class=""><code>EVERY_5_MINUTES</code> - results are sent every 5 minutes</li>
+<li class=""><code>NEVER</code> - results are not sent</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_UXZL" id="livesyncstatus">LiveSyncStatus<a href="#livesyncstatus" class="hash-link" aria-label="Direct link to LiveSyncStatus" title="Direct link to LiveSyncStatus" translate="no">​</a></h3>
+<ul>
+<li class=""><code>DIRTY</code> - changed since it was last sent</li>
+<li class=""><code>SENT</code> - the WCA accepted it, not read back yet</li>
+<li class=""><code>CONFIRMED</code> - read back from the WCA and matches</li>
+<li class=""><code>NOT_IN_ROUND</code> - the WCA doesn&#x27;t list the person in the round</li>
+<li class=""><code>NOT_SENDABLE</code> - can&#x27;t be sent, e.g. the person has no WCA registration</li>
+<li class=""><code>REJECTED</code> - the WCA refused it, or it breaks the round&#x27;s rules</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_TieQ"><a href="https://github.com/FKMTime/docs/tree/main/docs/docs/basic-knowledge/database-structure.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_In_e" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_l0L_"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/basic-knowledge/unofficial-events"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Unofficial events</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/category/development"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Development</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_dXdN thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#tables" class="table-of-contents__link toc-highlight">Tables</a><ul><li><a href="#competition" class="table-of-contents__link toc-highlight">Competition</a></li><li><a href="#unofficialevent" class="table-of-contents__link toc-highlight">UnofficialEvent</a></li><li><a href="#room" class="table-of-contents__link toc-highlight">Room</a></li><li><a href="#device" class="table-of-contents__link toc-highlight">Device</a></li><li><a href="#user" class="table-of-contents__link toc-highlight">User</a></li><li><a href="#quickaction" class="table-of-contents__link toc-highlight">QuickAction</a></li><li><a href="#person" class="table-of-contents__link toc-highlight">Person</a></li><li><a href="#staffactivity" class="table-of-contents__link toc-highlight">StaffActivity</a></li><li><a href="#result" class="table-of-contents__link toc-highlight">Result</a></li><li><a href="#attempt" class="table-of-contents__link toc-highlight">Attempt</a></li><li><a href="#extragrant" class="table-of-contents__link toc-highlight">ExtraGrant</a></li><li><a href="#attempteditlog" class="table-of-contents__link toc-highlight">AttemptEditLog</a></li><li><a href="#noteworthyincident" class="table-of-contents__link toc-highlight">NoteworthyIncident</a></li><li><a href="#manualincident" class="table-of-contents__link toc-highlight">ManualIncident</a></li><li><a href="#warning" class="table-of-contents__link toc-highlight">Warning</a></li><li><a href="#livesync" class="table-of-contents__link toc-highlight">LiveSync</a></li><li><a href="#liveclear" class="table-of-contents__link toc-highlight">LiveClear</a></li><li><a href="#scramblingdevice" class="table-of-contents__link toc-highlight">ScramblingDevice</a></li><li><a href="#scrambleset" class="table-of-contents__link toc-highlight">ScrambleSet</a></li><li><a href="#scramble" class="table-of-contents__link toc-highlight">Scramble</a></li></ul></li><li><a href="#enums" class="table-of-contents__link toc-highlight">Enums</a><ul><li><a href="#attempttype" class="table-of-contents__link toc-highlight">AttemptType</a></li><li><a href="#attemptstatus" class="table-of-contents__link toc-highlight">AttemptStatus</a></li><li><a href="#role" class="table-of-contents__link toc-highlight">Role</a></li><li><a href="#devicetype" class="table-of-contents__link toc-highlight">DeviceType</a></li><li><a href="#hardwareversion" class="table-of-contents__link toc-highlight">HardwareVersion</a></li><li><a href="#staffrole" class="table-of-contents__link toc-highlight">StaffRole</a></li><li><a href="#staffactivitystatus" class="table-of-contents__link toc-highlight">StaffActivityStatus</a></li><li><a href="#sendingresultsfrequency" class="table-of-contents__link toc-highlight">SendingResultsFrequency</a></li><li><a href="#livesyncstatus" class="table-of-contents__link toc-highlight">LiveSyncStatus</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
 </html>
