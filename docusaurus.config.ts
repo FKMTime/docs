@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const SITE_TITLE = "FKMTime Documentation — Scorecard-free Speedcubing System";
 const SITE_DESCRIPTION =
-  "Open-source documentation for FKMTime — run speedcubing competitions without scorecards. Setup guides, hardware assembly, firmware flashing and debugging.";
+  "Open-source documentation for FKMTime — run speedcubing competitions without scorecards. Setup guides, firmware flashing and debugging.";
 
 const config: Config = {
   title: "FKMTime",

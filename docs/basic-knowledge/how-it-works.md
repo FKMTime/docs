@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Basically, there are:
 - Backend: Nest.js
-- Frontend: React
+- Frontend: React (served by nginx in production)
 - Database: PostgreSQL
 - Micro-connector: Rust
 - FKMTime Devices (esp-hal / Rust)

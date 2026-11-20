@@ -4,37 +4,26 @@ sidebar_position: 5
 
 # Importing database dump
 
-You can import the database dump into the development environment in the following way:
+You can import the database dump into the [development environment](./dev-environment.md#docker)
+in the following way. Run the commands in the root directory of the FKMTime
+repository, with the dev stack running.
 
-1. Copy the dump file to the database container:
-
-```bash
-docker cp dump.sql fkmtime-dev-database:/dump.sql;
-```
-
-2. Enter the database container:
+1. Clear the development database:
 
 ```bash
-docker exec -it fkmtime-dev-database bash;
+docker compose exec database psql -d fkm_time -c 'DROP SCHEMA public CASCADE; CREATE SCHEMA public;'
 ```
 
-3. Enter the psql shell:
+2. Import the dump:
 
 ```bash
-psql -d fkm_time;
+docker compose exec -T database psql -d fkm_time < dump.sql
 ```
 
-4. Run the following command in the container:
-
-```sql
-DROP SCHEMA public CASCADE;
-CREATE SCHEMA public;
-```
-
-5. Exit psql shell and run the following command in the Docker container:
+3. Restart the backend, so it brings the schema up to date:
 
 ```bash
-psql -d fkm_time < dump.sql;
+docker compose restart backend
 ```
 
-That's it! You have successfully imported the database dump into the development environment. 
+That's it! You have successfully imported the database dump into the development environment.

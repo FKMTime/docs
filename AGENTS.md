@@ -3,7 +3,7 @@
 Guidance for AI agents (and people) working in this repository.
 
 This is the FKMTime user documentation site, built with Docusaurus. Pages live
-in `docs/`; downloadable files (firmware, assembly files) live in `static/`.
+in `docs/`; downloadable files (firmware) live in `static/`.
 The app itself is in [FKMTime/FKMTime](https://github.com/FKMTime/FKMTime).
 
 ## Rules

@@ -11,8 +11,9 @@ competition. It is designed to run on **OpenWRT** routers (so you can
 have a dedicated competition box that "just works"), but it also runs on
 any Linux host with Docker, on macOS, and on Windows with WSL.
 
-The web UI lives on `http://0.0.0.0:8181`. Default login is
-`root` / `root`.
+The web UI lives on `http://0.0.0.0:8181`. On OpenWRT you sign in with your
+LuCI username and password. Everywhere else the default login is
+`root` / `root`; change it under **Account** after the first sign-in.
 
 ## Running natively
 
@@ -58,6 +59,28 @@ docker run -d \
   -e FIM_DATA_DIR=/opt/fim \
   fim
 ```
+
+## Creating an instance
+
+1. In the **Instances** card, click **New instance**.
+2. Pick a **Template** — `prod` for a real competition, `dev` for a demo
+   instance that signs in against the dummy WCA services — enter a **Name**
+   and click **Create**.
+3. Open the **Env** tab and fill in the environment variables (see
+   [Setup for production](./setup-for-production#environment-variables)),
+   then click **Save**.
+4. Back in the **Control** tab, click **Start** next to the instance.
+
+The instance's logs are available in the panel, see
+[Accessing logs](./accessing-logs).
+
+## Wi-Fi on OpenWRT
+
+On OpenWRT, the **WiFi** tab sets the **Hotspot** that FKMTime devices
+connect to and the **Uplink** network that gives the router internet access.
+You can also set a **Backup uplink**, such as a phone hotspot: when the
+uplink has had no internet for a minute, FIM switches to the backup, and
+switches back once the uplink works again.
 
 ## BLE and mDNS on Docker Desktop (macOS / Windows)
 

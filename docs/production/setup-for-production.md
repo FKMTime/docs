@@ -24,33 +24,42 @@ cd production
 
 ## Environment variables
 
-Rename the .env.example file to .env and fill in the required fields.
+Copy the `.env.example` file to `.env` and fill in the required fields.
 
 ```bash
-mv .env.example .env
+cp .env.example .env
 ```
 
-For now, contact us and we will send you hash, token, proxy and WCA oauth credentials. Server will be running locally, but will be accessible from the internet through our proxy server.
+| Variable | What it is |
+|----------|------------|
+| `TOKEN` | Token for our proxy server |
+| `SECRET` | Random secret, at least 32 characters. It signs sign-in sessions and encrypts the WCA tokens stored in the database, so keep it the same for the whole competition |
+| `WCA_CLIENT_ID`, `WCA_CLIENT_SECRET` | WCA OAuth application credentials |
+| `WCA_ORIGIN`, `WCA_LIVE_API_ORIGIN`, `CUBING_CONTESTS_API_ORIGIN` | Addresses of the WCA website, WCA Live and Cubing Contests; keep the defaults |
+| `BACKEND_ORIGIN`, `REDIRECT_SSL` | Keep the defaults |
+
+For now, contact us and we will send you the proxy token and WCA OAuth
+credentials. Server will be running locally, but will be accessible from the
+internet through our proxy server.
+
+Generate `SECRET` yourself, for example with:
+
+```bash
+openssl rand -hex 32
+```
+
+:::warning
+The backend refuses to start without a `SECRET` of at least 32 characters.
+:::
 
 We are using [fkm-proxy](https://github.com/FKMTime/fkm-proxy) for proxying requests to the server. You can find more information about it in the repository.
 
-## Logs user
+## Start the server
 
-Generate a password hash for the logs user using the following command:
-```bash
-echo -n 'secret-password' | shasum -a 256
-```
-
-Rename the users-example.yml file to users.yml and paste your hash into "password" field
-
-```bash
-mv dozzle/users-example.yml dozzle/users.yml
-```
-
-And finally, run the following command to start the server:
+Run the following command to start the server:
 
 ```bash
 docker compose up
 ```
 
-This will start backend, micro-connector, database and frontend. 
+This will start backend, micro-connector, database and frontend.

@@ -50,7 +50,7 @@ const bgSvg = `<?xml version="1.0" encoding="UTF-8"?>
 
   <!-- Tagline -->
   <text x="80" y="360" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="400" fill="#e6f5ee">Run scorecard-free speedcubing competitions:</text>
-  <text x="80" y="402" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="400" fill="#e6f5ee">setup guides, hardware assembly, firmware flashing &amp; debugging.</text>
+  <text x="80" y="402" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="400" fill="#e6f5ee">setup guides, firmware flashing &amp; debugging.</text>
 
   <!-- CTA button -->
   <rect x="80" y="470" width="310" height="76" rx="38" fill="#ffffff"/>
