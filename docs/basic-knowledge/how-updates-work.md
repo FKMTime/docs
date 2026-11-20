@@ -8,6 +8,8 @@ We use [GitHub Releases](https://github.com/FKMTime/firmware/releases) to distri
 
 You have to turn on **Update devices** in **Setup** → **Competition** (the **Devices** card). After that, turn on all devices and micro-connector. Micro-connector checks for new updates every 5 minutes and if there is a new update, it will automatically download it and send it to all devices.
 
+![Update devices switch in competition settings](../assets/settings-devices.png)
+
 :::warning
 Turn **Update devices** off while the competition is in progress, and do not turn off device while updating!
 :::

@@ -15,6 +15,8 @@ Go to **Setup** → **Competition** (or click **Device settings** on the **Devic
 
 Click **Save** at the bottom of the page.
 
+![Network card in competition settings](../assets/settings-network.png)
+
 ## Adding devices
 
 ### If your machine supports bluetooth
@@ -29,11 +31,15 @@ Turn on the device and connect to the hotspot it creates. Its name is `FKM-XXXX`
 
 To connect a new device, press the submit button on it. The **Devices** page then shows **New device wants to connect** with its ESP ID. Click **Add**, fill in the **Create device** form (name, and room, type and hardware version when there is more than one to choose from) and click **Add**. A device that was added before shows **wants to reconnect** instead; click **Reconnect**.
 
+![Create device dialog](../assets/create-device.png)
+
 You can also add a device by hand with **Add device**, if you know its ESP ID.
 
 ## Managing devices
 
 Each device shows its battery, Wi-Fi signal, firmware version and how many solves it recorded. Click the number of solves to see every solve the device recorded. If a station hits an error, an icon next to it shows the error and how to fix it.
+
+![Devices page with a new device waiting to connect and the device actions menu](../assets/devices.png)
 
 Device actions:
 

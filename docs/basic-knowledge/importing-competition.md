@@ -12,6 +12,8 @@ To import a competition, you need a WCA account that manages the competition you
 
 After first login to the system, you will be redirected to the **Import competition** page. It lists **Your upcoming competitions**; click **Import** next to the one you want. Events, schedule and competitors are imported automatically.
 
+![Import competition page](../assets/import-competition.png)
+
 After the import you will be redirected to the competition settings: **Setup** → **Competition**. If you change something on the WCA website later (for example groups or registrations), click **Sync with WCA** at the top of this page.
 
 ## Competition settings
@@ -21,6 +23,8 @@ The settings are split into cards. After changing anything, click **Save** in th
 ### Results
 
 FKMTime sends official results where the competition's scoretaking setting on the WCA website says. **Official results go to** shows what it is: **WCA Live**, **WCA Integrated Live Results** or **Nowhere**. To change it, use **Change on the WCA website**, then click **Check again**.
+
+![Results card in competition settings](../assets/settings-results.png)
 
 #### WCA Live
 
@@ -57,3 +61,5 @@ The Wi-Fi network that FKMTime devices join, and how they find the server. See [
 - **Enable sound**, **Device volume** - sounds of the stations
 - **Default language** - language of the messages shown on the stations
 - **Secure RFID** - secure RFID cards with a token
+
+![Devices card in competition settings](../assets/settings-devices.png)

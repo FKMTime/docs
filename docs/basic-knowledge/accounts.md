@@ -26,13 +26,19 @@ You can't give anyone a role higher than your own: an organizer can't create del
 
 Users can be added after the competition is imported. Go to **Setup** → **Users** and click **Create user**. Choose between the **FKMTime Account** and **WCA Login** tabs.
 
+![Users tab](../assets/users.png)
+
 ### FKMTime Account
 
 Fill in **Username**, **Full name**, **Password** and **Roles** and click **Create**. User will be able to sign in with the username and password you provided.
 
+![Create user dialog, FKMTime Account tab](../assets/create-user-fkmtime.png)
+
 ### WCA Login
 
 Search for a person, select roles and click **Create**. User will be able to sign in with their WCA account and will have the roles you selected.
+
+![Create user dialog, WCA Login tab](../assets/create-user-wca.png)
 
 ## Managing accounts
 

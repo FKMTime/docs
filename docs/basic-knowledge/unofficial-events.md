@@ -10,7 +10,11 @@ It is possible to use FKMTime for unofficial events. Basically, all you need to 
 
 1. Go to **Setup** → **Unofficial events**.
 
+![Unofficial events tab](../assets/unofficial-events.png)
+
 2. Click **Add unofficial event**, select the event and set up its rounds: format, time limit (and whether it is cumulative) and cutoff. You can add up to 4 rounds.
+
+![Add unofficial event dialog](../assets/create-unofficial-event.png)
 
 3. Click **Add unofficial event**.
 
