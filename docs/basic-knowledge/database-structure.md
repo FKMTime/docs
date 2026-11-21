@@ -115,6 +115,13 @@ All user accounts are stored in this table, both FKMTime and WCA accounts added 
 - `createdAt` - date of creation
 - `updatedAt` - date of last update
 
+### StageLeadRoom
+
+The rooms a stage leader takes attendance in. A stage leader with no rows covers all rooms.
+
+- `userId` - [User](#user)
+- `roomId` - [Room](#room)
+
 ### QuickAction
 
 This table stores quick actions that can be used to simplify resolving incidents process by delegates.
