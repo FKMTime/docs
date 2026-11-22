@@ -26,7 +26,7 @@ Each row has **View attempts** (opens the result, see [A single result](#a-singl
 
 ### WCA Integrated Live Results
 
-When results go to WCA Integrated Live Results, the round list shows the state of each round there (not open yet, open, done or needs attention), and each result shows how it is doing:
+When results go to WCA Integrated Live Results and FKMTime is connected to it, the round list shows the state of each round there (not open yet, open, done or needs attention), and each result shows how it is doing:
 
 - **Sending** - on its way
 - **Not accepted**, **Not in round** or **Can't be sent** - it isn't getting through; hover over the badge for the reason
@@ -49,7 +49,7 @@ The round's menu (⋮) has:
 
 - **Public view** - the round as the public results show it.
 - **Resubmit to WCA Live** (or to WCA Integrated Live Results, or Cubing Contests for unofficial events) - sends the whole round again, overwriting it there.
-- When results go to WCA Integrated Live Results, actions for the round there, depending on its state: **Open in WCA Integrated Live Results**, **Add competitor to round** (first rounds), **Close in WCA Integrated Live Results**, **View on WCA live results** and **Clear in WCA Integrated Live Results**.
+- When FKMTime is connected to WCA Integrated Live Results, actions for the round there, depending on its state: **Open in WCA Integrated Live Results**, **Add competitor to round** (first rounds), **Close in WCA Integrated Live Results**, **View on WCA live results** and **Clear in WCA Integrated Live Results**.
 - **Restart group** - pick a group and confirm: all results from that group are deleted and its attendance is cleared. Use it when a group has to be run again.
 
 ## Entering an attempt quickly
@@ -67,12 +67,12 @@ At the top:
 - **Average** and **Best**, and how many attempts are entered.
 - **Limits & warnings** - the time limit (and how much of a cumulative limit is used and remaining), the cutoff, the number of attempts, and warnings such as **Differs from WCA Live** or **Staffed before competing**.
 - **Last attempt** - the latest attempt with its stackmat time, inspection and judge, buttons to edit it, give an extra or delete it, and **+2** and **DNF** to set its penalty in one click.
-- **WCA live results** - only when results go to WCA Integrated Live Results: whether the result is **Confirmed**, **Sending**, **Differs** or **Not sent yet**, FKMTime's attempts next to the WCA's, and **Clear in WCA live results**.
+- **WCA live results** - only when FKMTime is connected to WCA Integrated Live Results: whether the result is **Confirmed**, **Sending**, **Differs** or **Not sent yet**, FKMTime's attempts next to the WCA's, and **Clear in WCA live results**.
 
 The attempts are in tabs:
 
-- **Submitted** - the attempts that count, as sent to the results website
-- **Standard** and **Extra attempts** - every attempt, with judge, scrambler, station, comment, when it was solved, who edited it and its warnings. **Standard** has **Swap attempts**, to swap two attempts that were entered in the wrong order
+- **Submitted** - the attempts that count, as sent to the results website, with judge, scrambler, station, comment, when each was solved, who edited it and its warnings
+- **Standard** and **Extra attempts** (when there are extras) - every attempt, also showing what replaced it and its status. **Standard** has **Swap attempts**, to swap two attempts that were entered in the wrong order
 - **Reorder & extras** - drag attempts into the right order, and drag an extra onto the attempt it replaces
 
 Each attempt has:
