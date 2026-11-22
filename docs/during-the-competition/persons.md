@@ -16,7 +16,7 @@ Use **Search by name or WCA ID** to find someone. Next to the search you can nar
 
 - **ID** - the person's registrant ID
 - **Card** - the ID of a card, to find out whose card it is (only when the competition uses FKMTime devices)
-- **Newcomers** - only people without a WCA ID
+- **Newcomers** - only competitors without a WCA ID
 - **Not checked in** - only people who haven't checked in yet
 
 On a phone these sit under **Filters**, with **Clear** to remove them all.
@@ -61,13 +61,13 @@ The **Schedule** tab lists the person's assignments, day by day: time, group, ro
 
 Stage leaders, organizers and delegates also see the attendance taken on the **Attendance** page: **Present**, **Late**, **Absent**, **Replaced** (with who replaced them), **Left early**, or **Not coming**. Click a group's name to open its attendance. A stage leader can open only the groups in their rooms.
 
-If someone tells you they won't come for the rest of a day, click **Not coming** next to that day. It marks all their staff assignments that day as not coming, so you don't have to take their attendance group by group. If they show up after all, click **Coming after all**. Both show an **Undo** for a few seconds. The button is there only while the person still has staff assignments to come that day. A stage leader sees it only on days when the person has a group in their rooms (see [Stage leaders and rooms](../basic-knowledge/accounts.md#stage-leaders-and-rooms)).
+If someone tells you they won't come for the rest of a day, click **Not coming** next to that day. It marks all their remaining staff assignments that day as not coming, so you don't have to take their attendance group by group. If they show up after all, click **Coming after all**. Both show an **Undo** for a few seconds. The button is there only while the person still has staff assignments to come that day. A stage leader sees it only on days when the person has a group in their rooms (see [Stage leaders and rooms](../basic-knowledge/accounts.md#stage-leaders-and-rooms)).
 
 ### Results
 
 ![Results tab of a person](../assets/person-results.png)
 
-The **Results** tab lists the person's results in every round: group, average, best and the attempts. Click a round to open its results.
+The **Results** tab lists the person's results in every round: group, average, best and the attempts. On a computer, click a round to open its results.
 
 Organizers and delegates can click **View attempts** to open the result with all its attempts. Delegates also have **DNF all attempts in** an event (for example **DNF all attempts in 3x3x3 Cube**) in the row's menu, for example when a competitor is disqualified from an event. You can't use it while the person has an open incident in that event: resolve the incidents first.
 
