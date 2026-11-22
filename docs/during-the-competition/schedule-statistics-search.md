@@ -24,7 +24,7 @@ The activity taking place right now is highlighted (on a phone it gets a **Now**
 
 ### Scheduled and real times
 
-**Real** is worked out from the attempts sent from FKMTime stations: it runs from the first to the last station attempt of the round. While a round has only one such attempt, it shows **Started** and the time. Attempts entered by hand don't count, so a round entered only from paper scorecards has no real time. Compare it with **Scheduled** to see how far behind the schedule you are.
+**Real** is worked out from the attempts sent from FKMTime stations: it runs from the first to the last station attempt of the round, across all rooms. While a round has only one such attempt, it shows **Started** and the time. Attempts entered by hand don't count, so a round entered only from paper scorecards has no real time. Compare it with **Scheduled** to see how far behind the schedule you are.
 
 ### Links to results and attendance
 
@@ -52,7 +52,7 @@ At the top are the totals:
 On a computer, the page also has charts and lists:
 
 - **DNF and incidents rate** - attempts, DNFs and incidents for each event
-- **Delay for** each day - how far the first solve of each round was from its scheduled start, and the last solve from its scheduled end
+- **Delay for** each day - how far the first attempt of each round was from its scheduled start, and the last station attempt from its scheduled end
 - **Attempts by device** - how many attempts each station sent
 - **Averages with single station & judge** - results where every attempt was done at the same station with the same judge
 - **Judges mostly judging one competitor** - judges who judged one competitor for more than half of their attempts
@@ -62,17 +62,17 @@ A chart without enough data shows **Not enough data yet**, and the lists show on
 
 ## Search
 
-The search box at the top of the panel, **Search competitors, rounds, pages…**, finds anything you can open. It is in the header on a computer.
+The search box at the top of the panel, **Search competitors, rounds, pages…**, finds anything you can open. It is in the header on a computer; there is no search on a phone.
 
 ![Search results](../assets/global-search.png)
 
-Type at least 2 characters. Every word you type has to match, so `3x3 r1` finds 3x3x3 Cube Round 1. Results are grouped, at most 5 per group:
+Type at least 2 characters. For pages, rounds, groups, incidents and devices every word has to match, so `3x3 r1` finds the first rounds of the 3x3x3 events. Competitors are matched by name or WCA ID as typed. Results are grouped, at most 5 per group:
 
 - **Pages** - the pages and tabs you can open, for example **Users** or **Most missed**, and the public screens (**Public display** and **TV view**)
 - **Competitors** - by name or WCA ID; opens the person's page
 - **Rounds** - opens the round's results (when the competition uses FKMTime devices)
 - **Groups** - opens the group's attendance (stage leaders, organizers and delegates)
-- **Incidents** - open incidents, by competitor or round (when you can see incidents)
-- **Devices** - by name or ESP ID (organizers and delegates)
+- **Incidents** - open incidents, by competitor or round (when you can see incidents and the competition uses FKMTime devices)
+- **Devices** - by name or ESP ID (organizers and delegates, when the competition uses FKMTime devices)
 
 Use the arrow keys to move through the results, Enter to open the highlighted one and Escape to clear the search.

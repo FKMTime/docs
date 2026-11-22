@@ -68,7 +68,7 @@ When a password changes, every session signed in with the old password ends. Use
 
 Users with an FKMTime account, and delegates and admins, have a **Settings** page in the menu. Users who sign in with a WCA account and aren't delegates don't have it.
 
-- **Scan sounds** (under **This device**) - a short beep for each card scan at check-in and card assignment: high for success, low for a problem. It is saved in this browser only, so turn it on on each computer or phone at the check-in desk.
+- **Scan sounds** (under **This device**) - a short beep for each card scan at check-in and card assignment: one high beep for success, two low beeps for a problem. It is saved in this browser only, so turn it on on each computer or phone at the check-in desk.
 - **Account** (FKMTime accounts only) - change your **Username** and click **Save**, or click **Change password**.
 
 ## Access to competition
