@@ -14,7 +14,7 @@ Stage leaders, organizers, delegates and admins. A stage leader takes attendance
 
 Open **Attendance** from the menu, or click **Attendance** on a room's card on the **Home** page. If exactly one room is running a group, the page opens on that group.
 
-Choose a round from the strip at the top (rounds in progress show **Live**), or from the round list on its left (**Choose a round**). Then pick the group. A dot marks the group in progress. **Previous group** and **Next group** (the arrows on both sides) go through every group in schedule order, across rounds.
+Choose a round from the strip at the top (rounds in progress show **Live**), or from the round list on its left (**Choose a round**). On a phone, pick the event and then the round instead. Then pick the group. A dot marks the group in progress. **Previous group** and **Next group** (the arrows on both sides) go through every group in schedule order, across rounds.
 
 ![Attendance of a group](../assets/attendance-group.png)
 
@@ -38,7 +38,7 @@ When a card has more than one absent person, **Mark all present** marks all of t
 
 For someone present, the menu has **Left early** (only for present or late; it reads **Didn't leave early** once set), **Comment**, **Issue warning** (delegates only) and **Mark absent**. Marking absent someone who wasn't assigned to the group removes them from the list, after you confirm.
 
-After you mark someone, a message with **Undo** shows for a few seconds. Undo puts back what was there before. Removing someone who wasn't assigned can't be undone.
+After you mark someone, a message with **Undo** shows for a few seconds. Undo puts that person back as they were. Undoing **Replaced…** doesn't remove the person who did the job; mark them absent if they shouldn't be there. Removing someone who wasn't assigned can't be undone.
 
 ### Replaced
 
@@ -83,13 +83,13 @@ For an absent competitor:
 
 - **Change group** (the arrows) moves them to another group of the same round. Pick **New group**, click **Submit** and confirm. The change is written to the competition on the WCA website, and any other assignment they have during the new group is deleted. Only organizers and delegates who signed in with a WCA account can do it.
 - **Not coming** marks them as not coming to this group only. FKMTime then doesn't wait for them before [changing the group automatically](../basic-knowledge/selecting-event.md#changing-groups-automatically). **Coming after all** undoes it, and an attempt from them clears it.
-- **Remove from round** - organizers and delegates, in a later round when the competition sends results to WCA Integrated Live Results. FKMTime asks the WCA who is next in line, and you choose whether they advance.
+- **Remove from round** - organizers and delegates, in a later round, when the competition sends results to WCA Integrated Live Results and FKMTime is connected to it. If the round isn't open there yet, FKMTime offers to open it first (**Open … first**). Then it asks the WCA who is next in line, and you choose whether they advance.
 
 ![Change group dialog](../assets/attendance-change-group.png)
 
 ## Most missed
 
-The **Most missed** tab lists everyone in the competition, those who missed the most assignments first. Only groups that have started count as missed. **Not coming** assignments show even for groups still ahead.
+The **Most missed** tab lists everyone in the competition, with those who missed the most staff assignments first. Competing doesn't count. Only groups that have started count as missed. **Not coming** assignments show even for groups still ahead.
 
 Filter the list with **All**, **Missed**, **Not coming**, **Late**, **Left early** and **Replaced**. Click a person to see the groups behind each count and the comments on their assignments. **Groups** shows their assignments; delegates also have **Warnings** and **Issue warning**.
 
@@ -101,7 +101,7 @@ The **Statistics** tab shows staff attendance for the whole competition, countin
 
 ![Statistics tab](../assets/attendance-statistics.png)
 
-- **Summary** cards at the top: **Attendance** (the share of assignments covered), **Late** (counted as attended), **Absent** (with how many are not coming for the day), **Replaced**, **Left early** and **Extra help** (people who helped without an assignment).
+- Cards at the top: **Attendance** (the share of assignments covered), **Late** (counted as attended), **Absent** (with how many are not coming for the day), **Replaced**, **Left early** and **Extra help** (people who helped without an assignment).
 - **By round** - attendance per round.
 - The table, one row per person, with columns **Name**, **Attendance**, **Assigned**, **Present**, **Late**, **Absent**, **Replaced**, **Left early**, **No-show** and **Extra help**. Click a column header to sort by it.
 
