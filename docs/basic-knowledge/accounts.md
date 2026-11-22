@@ -42,7 +42,7 @@ Search for a person, select roles (and rooms, for a stage leader) and click **Cr
 
 ## Stage leaders and rooms
 
-A stage leader takes attendance in the rooms you give them, so a stage leader of one room can't change another room's attendance by picking the wrong group.
+A stage leader takes [attendance](../during-the-competition/attendance.md) in the rooms you give them, so a stage leader of one room can't change another room's attendance by picking the wrong group.
 
 When you give someone the **Stage leader** role, choose under **Takes attendance in** either **All rooms** or the rooms they cover. You can't create the account until something is ticked. If the competition has only one room, the field doesn't show and they cover all rooms. Organizers, delegates and admins always cover all rooms, so the field doesn't show for them either.
 
