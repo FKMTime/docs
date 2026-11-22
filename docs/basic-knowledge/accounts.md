@@ -22,6 +22,8 @@ But sometimes, you want for example Competition Volunteer to check-in competitor
 
 You can't give anyone a role higher than your own: an organizer can't create delegates or admins.
 
+A delegate can also give any other user [delegate access for one group](../during-the-competition/delegate-access.md). While it lasts, that user gets **Incidents** and can resolve the incidents of that group, with only the actions the delegate allowed. Their role doesn't change, and the access ends by itself when the group ends.
+
 ## Creating an account
 
 Users can be added after the competition is imported. Go to **Setup** → **Users** and click **Create user**. Choose between the **FKMTime Account** and **WCA Login** tabs.

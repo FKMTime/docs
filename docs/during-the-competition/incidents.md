@@ -9,10 +9,10 @@ When something goes wrong during an attempt, the judge calls the delegate from t
 The **Incidents** item in the menu shows how many incidents are open.
 
 :::note Who can use it
-Delegates (and admins). Someone with delegate access for a group sees only the open incidents of that group, and only the actions their access includes.
+Delegates (and admins). Someone with [delegate access](delegate-access.md) for a group sees only the open incidents of that group, and only the actions their access includes.
 :::
 
-The page has these tabs: **Open**, **Resolved**, **Noteworthy**, **Warnings**, **Manual** and **Delegate access**. If the competition doesn't use FKMTime devices, only **Warnings** and **Manual** are there, and **Incidents** opens on **Manual**.
+The page has these tabs: **Open**, **Resolved**, **Noteworthy**, **Warnings**, **Manual** and **Delegate access** (see [Delegate access for one group](delegate-access.md)). If the competition doesn't use FKMTime devices, only **Warnings** and **Manual** are there, and **Incidents** opens on **Manual**.
 
 ## Open
 

@@ -26,6 +26,7 @@ The room's **More** (…) menu has:
 
 - **Change group…** - pick any event, round and group. You can also run several groups in one room at the same time (**Run both**), for example when holding multiple events at the same time
 - **Back to the previous group**
+- **Give delegate access…** (delegates only) - let someone resolve the incidents of the room's running or next group, see [Delegate access for one group](../during-the-competition/delegate-access.md)
 - **Stop** a single group, when the room runs several of them
 - **Stop the room**
 
