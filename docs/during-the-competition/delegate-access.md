@@ -38,7 +38,7 @@ Delegate access always includes resolving incidents: correcting the time, penalt
 | **Give extras for several attempts** | No |
 | **DNF all attempts** | No |
 
-Whatever you tick, they can only act on competitors of that group: those assigned to it, and those who solved in it on a station in the room that runs it. Removing a result, double-checking, sending or resubmitting results, restarting a group and assigning DNS stay with delegates. So do warnings, noteworthy and manual incidents, and resolved incidents. A **DNF all attempts** that would also remove results from later rounds is refused.
+Whatever you tick, they can only act on competitors of that group: those assigned to it, and those who solved in it on a station in the room that runs it. Delegate access never includes removing a result, double-checking, sending or resubmitting results, restarting a group or assigning DNS, and never the **Resolved**, **Noteworthy**, **Warnings**, **Manual** or **Delegate access** tabs. A **DNF all attempts** that would also remove results from later rounds is refused.
 
 Giving access again to the same user for the same group changes the options of the access they already have.
 
