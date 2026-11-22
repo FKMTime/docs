@@ -33,10 +33,10 @@ The **Scramble sets** tab lists every round with the number of sets it has, or *
 
 ![Scramble sets tab with the round menu open](../assets/scrambles-sets.png)
 
-- **Add scramble set** - adds sets to the round, for example when you need a fresh set. Generate the set in TNoodle as Round 1 of the same event and upload it under **Upload scrambles**. The dialog says which letter the new sets start from. Click **Add**
+- **Add scramble set** - adds sets to the round, for example when you need a fresh set. In TNoodle, generate a file with only the new set, for this same event and round: FKMTime saves each set under the round named in the file. Upload it under **Upload scrambles** and click **Add**. The dialog says which letter the new sets start from
 - **Delete scramble set** (in the set's menu) - deletes one set
 - **Delete sets for this round** (in the menu next to **Add scramble set**) - deletes every set of the selected round
-- **Delete all scramble sets** - deletes the sets of every round, for example to start the import again
+- **Delete all scramble sets** (same menu) - deletes the sets of every round, for example to start the import again
 
 ![Add scramble set dialog](../assets/scrambles-add-set.png)
 
@@ -44,13 +44,13 @@ Deleting can't be undone; FKMTime asks you to confirm first.
 
 ## Scrambling devices
 
-Every laptop or tablet used for scrambling is added as a scrambling device in a room. It can scramble only rounds that are running in its room.
+Every laptop or tablet used for scrambling is added as a scrambling device in a room. It offers **Scramble** only for rounds that are running in its room.
 
 Go to **Scrambles** → **Scrambling devices** and click **Add device**. Enter a **Name**, choose the **Room** and click **Save**.
 
 ![Create scrambling device dialog](../assets/scrambles-create-device.png)
 
-To sign the device in, click **One-time login code** (the key icon) next to it. FKMTime shows a 6-digit code. The code works for 10 minutes and only once; open the dialog again for a new one. Each time a device signs in with a new code, any device signed in earlier with that entry is signed out.
+To sign the device in, click **One-time login code** (the key icon) next to it. FKMTime shows a 6-digit code. The code works for 10 minutes and only once. Opening the dialog again shows a new code and cancels the previous one. When a browser signs in with a new code, any browser signed in earlier as this scrambling device stops working and has to be signed in again.
 
 ![One-time login code dialog](../assets/scrambles-one-time-code.png)
 
@@ -68,11 +68,11 @@ Open FKMTime on the device and click **Scrambling device** on the sign-in page. 
 
 ![Sign-in page with the Scrambling device button](../assets/scrambles-device-sign-in.png)
 
-Type the code from **One-time login code** under **Device code**. FKMTime sends it as soon as the sixth digit is typed (or click **Continue**). **Wrong code** means the code is mistyped, already used, or older than 10 minutes. **Back to staff sign in** goes back to the usual sign-in.
+On the **Scrambling device** page, type the 6-digit code from **One-time login code** into the boxes. FKMTime sends it as soon as the sixth digit is typed (or click **Continue**). **Wrong code** means the code is mistyped, already used, replaced by a newer code, or older than 10 minutes. **Back to staff sign in** goes back to the usual sign-in.
 
 ![Device code page](../assets/scrambles-device-code.png)
 
-The device stays signed in until you click **Log out** on its home page, or until it is signed in again with a new code.
+The device stays signed in until you click **Log out** on its home page, until it is signed in again with a new code, or until the device is deleted.
 
 ### Choosing a set
 
@@ -91,11 +91,11 @@ For a round that is running in the room, each set has a **Scramble** button. Its
 
    ![Unlocking a scramble set](../assets/scrambles-device-unlock.png)
 
-3. **Scan the scrambler's card.** The scrambler signs every attempt scrambled on this device, so they scan in once when they start.
+3. **Scan the scrambler's card.** The scrambler signs every attempt scrambled on this device, so they scan in each time a set is opened.
 
    ![Scan the scrambler's card](../assets/scrambles-device-scan-scrambler.png)
 
-4. **Scan the competitor's card.** FKMTime picks the competitor's next attempt and shows its scramble: the competitor's name and WCA ID (or **Newcomer**), the scramble number (**Scramble 1**, or **Extra 1** for an extra attempt granted by a delegate), the scramble and a picture of the scrambled puzzle.
+4. **Scan the competitor's card.** FKMTime picks the competitor's next attempt and shows its scramble: the competitor's name and WCA ID (or **Newcomer**), the scramble number (**Scramble 1**, or **Extra 1** for an extra attempt a delegate granted with **Extra scrambles**; when the delegate chose **Fresh set**, the device shows the normal **Scramble** number, so open a set the competitor hasn't used), the scramble and a picture of the scrambled puzzle.
 
    ![Scramble shown for a competitor](../assets/scrambles-device-scramble.png)
 
@@ -114,7 +114,7 @@ Messages you may see when scanning:
 - **Scrambler and competitor cannot be the same**
 - **No attempts left** - the competitor has done all attempts of the round
 
-If the round stops running in the room while a set is open, the device warns: **This round isn't running in this room. Check that this is the right set before scrambling.**
+If you open a set of a round that isn't running in the room, the device warns: **This round isn't running in this room. Check that this is the right set before scrambling.** The device doesn't notice a group change while a set is open, so go back to the home page when the room moves on.
 
 ### Other options
 
