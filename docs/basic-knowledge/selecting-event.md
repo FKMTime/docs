@@ -54,7 +54,7 @@ Above the room cards, the **Home** page shows alerts when something needs doing.
 
 Each room card shows, besides the running group and its progress:
 
-- **Incidents** - the room's open incidents, each with **Resolve** (delegates only)
-- **Recent results** - the latest attempts entered in the room
+- **Incidents** (delegates only) - the room's open incidents, each with **Resolve**
+- **Recent results** - the latest attempts of the round running in the room
 - stations of the room that run another round (**… is running …**), with **Back to the room's round** (delegates only)
 - what the group is waiting for: competitors still solving, incidents to resolve, extras to do, and who hasn't started yet, with **Not coming** for those who take attendance in the room. When the room moves on by itself, it also says when

@@ -33,7 +33,7 @@ When every result is double-checked, the page says **All N results double-checke
 
 Use **Enter scorecard** when attempts were written only on paper, for example when a station didn't work.
 
-1. Type the competitor's ID into **Competitor** (or pick them from the list) and press Enter. Their scorecard opens with every attempt of the round; attempts already in FKMTime are filled in.
+1. Type the competitor's ID into **Competitor** (or pick them from the list). Their scorecard opens with every attempt of the round; attempts already in FKMTime are filled in. Press Enter to jump to the first time.
 2. Type each **Time** and choose its **Penalty**. A time over the time limit becomes DNF.
 3. Press Enter in the last time, or click **Save scorecard**. FKMTime confirms with **Saved … scorecard** and a link to **Open result**, and the cursor goes back to **Competitor** for the next one.
 
