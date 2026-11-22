@@ -38,7 +38,7 @@ When a card has more than one absent person, **Mark all present** marks all of t
 
 For someone present, the menu has **Left early** (only for present or late; it reads **Didn't leave early** once set), **Comment**, **Issue warning** (delegates only) and **Mark absent**. Marking absent someone who wasn't assigned to the group removes them from the list, after you confirm.
 
-After each change a message with **Undo** shows for a few seconds. Undo puts back what was there before.
+After you mark someone, a message with **Undo** shows for a few seconds. Undo puts back what was there before. Removing someone who wasn't assigned can't be undone.
 
 ### Replaced
 
@@ -89,7 +89,7 @@ For an absent competitor:
 
 ## Most missed
 
-The **Most missed** tab lists staff by how many assignments they missed, for the whole competition. Only groups that have started count as missed. **Not coming** assignments show even for groups still ahead.
+The **Most missed** tab lists everyone in the competition, those who missed the most assignments first. Only groups that have started count as missed. **Not coming** assignments show even for groups still ahead.
 
 Filter the list with **All**, **Missed**, **Not coming**, **Late**, **Left early** and **Replaced**. Click a person to see the groups behind each count and the comments on their assignments. **Groups** shows their assignments; delegates also have **Warnings** and **Issue warning**.
 
