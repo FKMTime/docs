@@ -14,7 +14,7 @@ Live times come from FKMTime stations, so these screens are meant for competitio
 
 Click **Public display** at the bottom of the sign-in page, or open `/public` on your FKMTime address. Share that link with competitors, for example on a QR code at the venue.
 
-The sidebar has two tabs:
+The sidebar has two items:
 
 - **Live solving** - the station board, described [below](#the-station-board). When the stations span several rooms, you can pick one room or **All rooms**.
 - **Results** - the results of every round. Rounds with a group in progress are listed under **Results** in the sidebar.
@@ -73,7 +73,7 @@ When the round has a cumulative time limit (for example in blindfolded events), 
 Click **Live solving** in the sidebar (or open `/results/live`). It's the same board, with a few additions for staff:
 
 - every station is listed, also ones that haven't sent anything yet, and the counters include how many stations are **offline**
-- for delegates, when a station calls the delegate, its card gets a red border and an **Incident** badge, and the page plays a sound
+- for delegates and users with delegate access, when a station calls the delegate, its card gets a red border and an **Incident** badge, and the page plays a sound
 
 ![Live solving in the panel](../assets/public-display-staff-live.png)
 
@@ -86,4 +86,4 @@ The panel has a copy of the public results, called **Public view**. It works the
 - Delegates open it from a round in **Results**: in the round's more actions menu (**…**), click **Public view**.
 - Everyone else gets the public view when they click **Results** in the sidebar.
 
-Signed-in users can also find **Public display** and **TV view** in the search at the top of the panel.
+Signed-in users can also find **Public display** and **TV view** in the search at the top of the panel (on a computer; the phone layout has no search).
