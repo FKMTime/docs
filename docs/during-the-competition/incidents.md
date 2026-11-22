@@ -23,12 +23,12 @@ The page has these tabs: **Open**, **Resolved**, **Noteworthy**, **Warnings**, *
 The incident shows:
 
 - **Previous extras** - the competitor's earlier incidents in the competition, grouped by comment, so you can see if the same thing keeps happening
-- **Quick actions** - one click resolves the incident with a ready comment. The built-in ones (**A7G**, **Judge fault**, **Distraction**, **Timer malfunction**) give an extra attempt; you can add your own (see [Quick actions](#quick-actions))
+- **Quick actions** - one click resolves the incident with a ready comment. The built-in ones (**A7G**, **Judge fault**, **Distraction**, **Timer malfunction**) give an extra attempt; you can add your own (see [Quick actions](#quick-actions)). A quick action saves the attempt as the station sent it and ignores the form below; to correct the time, penalty or judge, edit the form and use **Mark as resolved** or **Save and give extra** instead
 - **Inspection time**, as measured by the station
 - **Attempt number**, **Time**, **Penalty** and **Judge** - correct them if the station got something wrong
 - **Comment** - why you decided what you did; it shows in the **Resolved** tab and in the **Summary**
 - **Mark as noteworthy incident** - also saves the incident to the **Noteworthy** tab
-- **Do not require cards to be scanned** (bugs only) - normally, after an incident is resolved, the station asks for the competitor's and judge's cards again to confirm the result. Tick this only when the station can't get past that step
+- **Do not require cards to be scanned** (bugs only) - normally, after **Mark as resolved**, the station asks for the competitor's and judge's cards again to confirm the result. Tick this only when the station can't get past that step
 
 Then choose:
 
