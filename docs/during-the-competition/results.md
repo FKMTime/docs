@@ -43,7 +43,7 @@ Above the table:
 - **Enter scorecard** - type in a competitor's paper scorecard, attempt by attempt.
 - **Double check** - go through the round's results one competitor at a time. It shows once the round has results.
 
-**Enter scorecard** and **Double check** are described on their own page.
+**Enter scorecard** and **Double check** are described in [Double check and scorecards](double-check-and-scorecards.md).
 
 The round's menu (⋮) has:
 
