@@ -66,7 +66,12 @@ Each user in the list has actions to **Edit user** (roles, a stage leader's room
 
 When a password changes, every session signed in with the old password ends. Users who are deleted or whose roles change are disconnected within a few seconds and see the panel with their new access.
 
-Users with an FKMTime account can change their own password on the **Settings** page.
+## Settings
+
+Users with an FKMTime account, and delegates and admins, have a **Settings** page in the menu. Users who sign in with a WCA account and aren't delegates don't have it.
+
+- **Scan sounds** (under **This device**) - a short beep for each card scan at check-in and card assignment: one high beep for success, two low beeps for a problem. It is saved in this browser only, so turn it on on each computer or phone at the check-in desk.
+- **Account** (FKMTime accounts only) - change your **Username** and click **Save**, or click **Change password**.
 
 ## Access to competition
 
