@@ -273,6 +273,32 @@ Warnings given to competitors.
 - `createdAt` - date of creation
 - `updatedAt` - date of last update
 
+### DelegateGrant
+
+Delegate access for one group: a delegate lets a user resolve the group's incidents while it runs. See [Delegate access for one group](../during-the-competition/delegate-access.md).
+
+- `id` - unique identifier
+- `userId` - [User](#user) who got the access
+- `groupId` - WCIF group activity code, e.g. `333-r1-g2`
+- `permissions` - array of [DelegateGrantPermission](#delegategrantpermission), what they can do besides resolving incidents
+- `createdById` - [User](#user) that gave it
+- `createdAt` - date of creation
+- `activatedAt` - when the group started in its room, null while the access waits for the group
+- `endedAt` - date the access ended, by itself or ended by a delegate
+- `endedById` - [User](#user) that ended it early
+
+### DelegateGrantAction
+
+What a user did under delegate access, for delegates to look over.
+
+- `id` - unique identifier
+- `grantId` - [DelegateGrant](#delegategrant)
+- `kind` - what kind of action it was, e.g. resolving an incident or giving an extra
+- `resultId`, `attemptId` - the result and attempt it changed. Plain IDs, not relations, so the action stays after the attempt is deleted
+- `personName` - the competitor's name
+- `summary` - what changed, in words
+- `createdAt` - date of creation
+
 ### LiveSync
 
 Where each result stands in WCA integrated live results.
@@ -356,6 +382,16 @@ See [Accounts](./accounts.md#roles) for what each role can do.
 ### HardwareVersion
 - `V3`
 - `V4`
+
+### DelegateGrantPermission
+What [delegate access](#delegategrant) allows besides resolving incidents.
+- `GIVE_EXTRA` - give an extra
+- `ADD_ATTEMPT` - add an attempt
+- `REORDER_ATTEMPTS` - reorder attempts
+- `EDIT_ATTEMPT` - edit an attempt that isn't an incident
+- `DELETE_ATTEMPT` - delete an attempt
+- `EXTRAS_FOR_SEVERAL` - give extras for several attempts
+- `DNF_ALL` - DNF all attempts
 
 ### StaffRole
 - `COMPETITOR` - competitor
