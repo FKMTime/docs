@@ -63,4 +63,4 @@ A banner across the panel says which group the access is for and who gave it, an
 
 ![Delegate access banner](../assets/delegate-access-banner.png)
 
-They get **Incidents** in the menu with only the **Open** tab, showing the open incidents of their group. Buttons for actions their access doesn't include are hidden, and **Mark as noteworthy incident** and **Previous extras** don't show. If their access ends while they are working, saving fails with a message that it has ended, and the incident stays open for delegates.
+They get **Incidents** in the menu with only the **Open** tab, showing the open incidents of their group. Buttons for actions their access doesn't include are hidden, and **Mark as noteworthy incident** and **Previous extras** don't show. Each incident links to the competitor's result: **Open result**, or **Several attempts affected? Give extras on the result page** when their access includes **Give extras for several attempts**. The result page, too, shows only the actions their access includes. If their access ends while they are working, saving fails with a message that it has ended, and the incident stays open for delegates.

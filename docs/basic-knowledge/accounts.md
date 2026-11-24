@@ -72,6 +72,7 @@ Users with an FKMTime account, and delegates and admins, have a **Settings** pag
 
 - **Scan sounds** (under **This device**) - a short beep for each card scan at check-in and card assignment: one high beep for success, two low beeps for a problem. It is saved in this browser only, so turn it on on each computer or phone at the check-in desk.
 - **Account** (FKMTime accounts only) - change your **Username** and click **Save**, or click **Change password**.
+- **Quick actions** (delegates) - your one-click comments for incidents and extras, see [Quick actions](../during-the-competition/incidents.md#quick-actions).
 
 ## Access to competition
 

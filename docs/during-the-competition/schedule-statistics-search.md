@@ -52,7 +52,7 @@ At the top are the totals:
 On a computer, the page also has charts and lists:
 
 - **DNF and incidents rate** - attempts, DNFs and incidents for each event
-- **Delay for** each day - how far the first attempt of each round was from its scheduled start, and the last station attempt from its scheduled end
+- **Delay for** each day - how far the first attempt of each round was from its scheduled start, and the last station attempt from its scheduled end. A round that started or ended early shows below zero
 - **Attempts by device** - how many attempts each station sent
 - **Averages with single station & judge** - results where every attempt was done at the same station with the same judge
 - **Judges mostly judging one competitor** - judges who judged one competitor for more than half of their attempts
@@ -71,7 +71,7 @@ Type at least 2 characters. For pages, rounds, groups, incidents and devices eve
 - **Pages** - the pages and tabs you can open, for example **Users** or **Most missed**, and the public screens (**Public display** and **TV view**)
 - **Competitors** - by name or WCA ID; opens the person's page
 - **Rounds** - opens the round's results (when the competition uses FKMTime devices)
-- **Groups** - opens the group's attendance (stage leaders, organizers and delegates)
+- **Groups** - opens the group's attendance (stage leaders, organizers and delegates). A stage leader finds only the groups in their rooms
 - **Incidents** - open incidents, by competitor or round (when you can see incidents and the competition uses FKMTime devices)
 - **Devices** - by name or ESP ID (organizers and delegates, when the competition uses FKMTime devices)
 
