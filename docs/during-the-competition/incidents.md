@@ -38,7 +38,7 @@ Then choose:
 
 Your answer goes back to the station straight away. Unless you gave an extra, the result is sent to the results website.
 
-When several attempts of a competitor are affected, follow **Several attempts affected? Give extras on the result page** to give the extras on the result's page.
+When several attempts of a competitor are affected, follow **Several attempts affected? Give extras on the result page** to give the extras on the result's page. Someone with [delegate access](delegate-access.md) who can't give extras for several attempts gets **Open result** instead.
 
 ### Tutorial incidents
 
@@ -56,7 +56,7 @@ Each row has:
 - **Copy incident info** - copies the competitor, their WCA ID and the round and attempt (e.g. `2x2 R1A2`), for a delegate report
 - **Save as noteworthy** - adds the incident to the **Noteworthy** tab
 
-**Summary** groups the resolved incidents by comment and shows for each one whether an extra was given, the attempt was a DNF, or the original time stands.
+**Summary** groups the resolved incidents by comment and shows for each one whether an extra was given, the attempt was a DNF, or the original time stands. It covers only the incidents the search finds, so clear the search to get every incident in it.
 
 ## Noteworthy
 
@@ -65,6 +65,8 @@ Each row has:
 ## Warnings
 
 **Warnings** lists the warnings given to competitors and who gave them. Click **Add warning**, choose the **Competitor** and describe what happened. You can also give a warning with **Issue warning** on the **Persons** page or on the **Attendance** page.
+
+To remove a warning, click **Delete warning** (the bin icon) in its row. You can **Undo** it for a few seconds.
 
 ## Manual
 
@@ -87,4 +89,4 @@ Click **Add quick action** and fill in:
 
 ![Create quick action dialog](../assets/incidents-add-quick-action.png)
 
-The list shows what each action does (**Gives extra** or **Resolves, no extra**) and whether it's **Shared** or **Only me**. Each action can be edited, shared or unshared, or deleted.
+The list shows what each action does (**Gives extra** or **Resolves, no extra**), whether it's **Shared** or **Only me**, and who created it. Each action's menu has **Edit quick action**, **Share with other delegates** (or **Stop sharing**) and **Delete quick action**. A shared action can be edited, unshared or deleted by any delegate, not only the one who created it. A deleted action can be brought back with **Undo** for a few seconds.

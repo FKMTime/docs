@@ -33,7 +33,7 @@ The **Scramble sets** tab lists every round with the number of sets it has, or *
 
 ![Scramble sets tab with the round menu open](../assets/scrambles-sets.png)
 
-- **Add scramble set** - adds sets to the round, for example when you need a fresh set. In TNoodle, generate a file with only the new set, for this same event and round: FKMTime saves each set under the round named in the file. Upload it under **Upload scrambles** and click **Add**. The dialog says which letter the new sets start from
+- **Add scramble set** - adds sets to the round, for example when you need a fresh set. In TNoodle, generate a file with only the new sets, as Round 1 of the same event: FKMTime adds the file's Round 1 sets of that event to the round you opened, whichever round that is, lettered after the round's last set. Upload it under **Upload scrambles** and click **Add**. The dialog says which letter the new sets start from. A file without Round 1 sets of the event shows **This file has no scramble sets for … Round 1**, and **Add** stays off
 - **Delete scramble set** (in the set's menu) - deletes one set
 - **Delete sets for this round** (in the menu next to **Add scramble set**) - deletes every set of the selected round
 - **Delete all scramble sets** (same menu) - deletes the sets of every round, for example to start the import again
@@ -113,6 +113,8 @@ Messages you may see when scanning:
 - **Competitor not found**
 - **Scrambler and competitor cannot be the same**
 - **No attempts left** - the competitor has done all attempts of the round
+
+If the station enters the competitor's solve between the card scan and **Sign**, signing is refused with, for example, **Scramble 2 was already solved. Scan the competitor's card again.** Nothing is signed; scan the card again to get their next scramble.
 
 If you open a set of a round that isn't running in the room, the device warns: **This round isn't running in this room. Check that this is the right set before scrambling.** The device doesn't notice a group change while a set is open, so go back to the home page when the room moves on.
 
